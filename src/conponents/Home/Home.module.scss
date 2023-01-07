@@ -1,0 +1,210 @@
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin possitionTopLeft($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+@mixin image($url, $position, $size) {
+  background: url($url) no-repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin font($family, $color, $size, $transform, $align) {
+  font-family: $family; 
+  color: $color;
+  font-size: $size;
+  text-transform: $transform;
+  text-align: $align;
+}
+
+.home {
+  @include dimensions(100%, 2230px);
+
+  button {
+    @include possitionTopLeft(relative, 870px, 50%);
+    transform: translate(-50%);
+
+    @include dimensions(130px, 25px);
+
+    @include font("Roboto-Bold", black, 12px, uppercase, center);
+
+    border: none;
+    background-color: #a4a4a4;
+    border-radius: 3px;
+    color: white;
+
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #bebebe;
+  }
+}
+
+.background {
+  @include image("../../assets/images/main_background.png", center, cover);
+  @include possitionTopLeft(absolute, 0px, 0px);
+  @include dimensions(100%, 700px);
+}
+
+.lian_creative_agency_block {
+  background-color: rgb(0, 0, 0);
+
+  @include possitionTopLeft(absolute, 260px, 50%);
+  transform: translate(-50%);
+
+  @include dimensions(620px, 58px);
+
+  .lian_creative_agency {
+    @include font("Lato-Light", white, 48px, uppercase, center);
+    
+    @include possitionTopLeft(relative, 50%, 50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+.minimal_freelance_portfolio {
+  @include font("Lato-Light", black, 18px, uppercase, center);
+  letter-spacing: 6px;
+
+  @include possitionTopLeft(absolute, 350px, 50%);
+  transform: translate(-50%);
+
+  height: 20px;
+  z-index: 1;
+}
+
+.navbar_block {
+  border-bottom: solid 1px #dfdfdf;
+  border-top: solid 1px #dfdfdf;
+
+  @include dimensions(100%, 70px);
+  @include possitionTopLeft(relative, 750px, 0);
+
+  .navbar {
+    display: flex;
+    gap: 55px;
+  
+    @include font("Roboto-Bold", grey, 14px, uppercase, center);
+  
+    @include possitionTopLeft(relative, 50%, 50%);
+    transform: translate(-50%, -50%);
+
+    @include dimensions(750px, 15px);
+
+    // .item:after { 
+    //   content: ''; 
+    //   @include possitionTopLeft(relative, 0, 10px);
+  
+    //   @include dimensions(50px, 15px);
+    //   background-color: aqua;
+
+    //   border-right: solid 1px grey;
+    //   transform: rotate(90deg);
+    // }
+
+    .item:hover {
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+
+.images {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 30% 30% 30%;
+
+  @include possitionTopLeft(relative, 800px, 50%);
+  transform: translate(-50%);
+
+  @include dimensions(75%, 1230px);
+
+  a { display: block; position: relative; cursor: pointer;}
+
+  a:after { 
+    content: ''; 
+    @include possitionTopLeft(absolute, 0, 0);
+    right: 0; 
+    bottom: 0; 
+
+    background: rgba(0, 0, 0, 0.5);  
+    opacity: 0; 
+  }
+
+  a:hover:after { opacity: 1; }
+
+  .column_1 {
+    display: grid;
+    align-items: end;
+    height: 1100px;
+  
+    .img_1 {
+      @include image("../../assets/images/img_1.png", 50% 60%, 150%);
+      @include dimensions(350px, 300px);
+    }
+    
+    .img_2 {
+      @include image("../../assets/images/img_2.png", 25% 20%, 150%);
+      @include dimensions(350px, 250px);
+    }
+    
+    .img_3 {
+      @include image("../../assets/images/img_3.png", 25%, 140%);
+      @include dimensions(350px, 450px);
+    }
+  }
+  
+  .column_2 {
+    display: grid;
+    align-items: start;
+    height: 1300px;
+  
+    .img_4 {
+      @include image("../../assets/images/img_4.png", center, 100%);
+      @include dimensions(350px, 250px);
+    }
+    
+    .img_5 {
+      @include image("../../assets/images/img_5.png", center, 100%);
+      @include dimensions(350px, 350px);
+    }
+    
+    .img_6 {
+      @include image("../../assets/images/img_6.png", center, 130%);
+      @include dimensions(350px, 250px);
+    }
+    
+    .img_7 {
+      @include image("../../assets/images/img_7.png", center, 150%);
+      @include dimensions(350px, 350px);
+    }
+  }
+  
+  .column_3 {
+    display: grid;
+    align-items: end;
+    height: 1100px;
+  
+    .img_8 {
+      @include image("../../assets/images/img_8.png", center, 150%);
+      @include dimensions(350px, 350px);
+    }
+    
+    .img_9 {
+      @include image("../../assets/images/img_9.png", center, 100%);
+      @include dimensions(350px, 230px);
+    }
+    
+    .img_10 {
+      @include image("../../assets/images/img_10.png", center, cover);
+      @include dimensions(350px, 350px);
+    }
+  }
+}

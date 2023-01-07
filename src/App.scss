@@ -1,0 +1,42 @@
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin possitionTopLeft($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+@mixin image($url, $position, $size) {
+  background: url($url) no-repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+.App {
+  user-select: none;
+}
+
+.content {
+  position: relative;
+}
+
+@font-face {
+  /* Roboto-Bold */
+  font-family: "Roboto-Bold"; 
+  src: url("./assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  } 
+
+@font-face {
+  /* Lato-Light */
+  font-family: "Lato-Light"; 
+  src: url("./assets/fonts/Lato/Lato-Light.ttf") format("truetype");
+  } 
+
+@font-face {
+  /* Lato-Regular */
+  font-family: "Lato-Regular"; 
+  src: url("./assets/fonts/Lato/Lato-Regular.ttf") format("truetype");
+  } 
