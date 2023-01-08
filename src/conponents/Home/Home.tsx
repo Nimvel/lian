@@ -5,8 +5,8 @@ const Home = () => {
         <div className={s.home}>
             <div className={s.background}></div>
 
-            <div className={`block_1 ${s.lian_creative_agency}`}>
-                <div className='text_1'>lian creative agency</div>
+            <div className={`text_block ${s.lian_creative_agency}`}>
+                <div className='text'>lian creative agency</div>
             </div>
 
             <div className={`text_2 ${s.minimal_freelance_portfolio}`}>minimal freelance portfolio</div>

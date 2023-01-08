@@ -31,10 +31,10 @@
     margin-bottom: 0;
   }
 
-  .block_1 {
+  .text_block {
     background-color: black;
 
-    .text_1 {
+    .text {
       @include font("Lato-Light", white, 48px, uppercase, center);
     
       @include possitionTopLeft(relative, 50%, 50%);
@@ -67,24 +67,48 @@
     line-height: 2;
   }
 
-  .navbar {
-    display: flex;
+  .skillbar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include dimensions(100%, 18px);
+    background-color: #f6f6f8;
 
-    @include font("Roboto-Bold", grey, 14px, uppercase, center);
-
-    .active {
-        color: black;
-        text-decoration: none;
+    .line {
+      margin-left: 5px;
+      @include possitionTopLeft(relative, 50%, 0);
+      transform: translate(0, -50%);
+      height: 3px;
+      background-color: #aeaeae;
+      z-index: 0;
     }
 
-    .item {
-        color: grey;
-        text-decoration: none;
+    .circle {
+      @include dimensions(6px, 6px);
+      border: solid 5px #2c2c2c;
+      border-radius: 50%;
+      @include possitionTopLeft(relative, 0, null);
+      z-index: 2;
     }
-    .item:hover {
-        color: black;
-        text-decoration: none;
-    }
+  }
+}
+
+.navbar {
+  display: flex;
+
+  @include font("Roboto-Bold", grey, 14px, uppercase, center);
+
+  .active {
+      color: black;
+      text-decoration: none;
+  }
+
+  .item {
+      color: grey;
+      text-decoration: none;
+  }
+  .item:hover {
+      color: black;
+      text-decoration: none;
   }
 }
 

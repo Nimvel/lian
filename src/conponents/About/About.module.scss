@@ -28,7 +28,7 @@
 }
 
 .header {
-  background-color: #f3f3f3;
+  background-color: #f6f6f8;
   @include dimensions(100%, 400px);
 
   .about_the_agency {
@@ -39,7 +39,7 @@
   
   .welcome_to_lian {
     @include possitionTopLeft(relative, 130px, 15%);
-    @include dimensions(260px, 58px);
+    @include dimensions(260px, 28px);
     z-index: 1;
   }
   
@@ -64,6 +64,14 @@
     @include dimensions(500px, 500px);
   }
 
+  .photoshop_line {width: 90%}
+  .photoshop_circle {left: 90%}
+  .branding_line {width: 95%}
+  .branding_circle {left: 95%}
+  .photography_line {width: 50%}
+  .photography_circle {left: 50%}
+  .design_line {width: 85%}
+  .design_circle {left: 85%}
 }
 
 .awesome_team_block {
