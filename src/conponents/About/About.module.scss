@@ -1,0 +1,123 @@
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin possitionTopLeft($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+@mixin image($url, $position, $size) {
+  background: url($url) no-repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin font($family, $color, $size, $transform, $align) {
+  font-family: $family; 
+  color: $color;
+  font-size: $size;
+  text-transform: $transform;
+  text-align: $align;
+}
+
+.about {
+  @include dimensions(100%, 1900px);
+}
+
+.header {
+  background-color: #f3f3f3;
+  @include dimensions(100%, 400px);
+
+  .about_the_agency {
+    @include possitionTopLeft(relative, 100px, 15%);
+    @include dimensions(560px, 58px);
+    z-index: 1;
+  }
+  
+  .welcome_to_lian {
+    @include possitionTopLeft(relative, 130px, 15%);
+    @include dimensions(260px, 58px);
+    z-index: 1;
+  }
+  
+  .img_1 {
+    @include image("../../assets/images/about/img_1.png", 100% 30%, 110%);
+    @include possitionTopLeft(absolute, 0px, null);
+    right: 0px;
+    @include dimensions(900px, 400px);
+  }
+}
+
+.block_1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  @include dimensions(70%, 500px);
+  @include possitionTopLeft(relative, 70px, 50%);
+  transform: translate(-50%);
+
+  .img_2 {
+    @include image("../../assets/images/about/img_2.png", 80%, 150%);
+    @include dimensions(500px, 500px);
+  }
+
+}
+
+.awesome_team_block {
+  @include possitionTopLeft(relative, 100px, 50%);
+  transform: translate(-50%);
+  @include dimensions(600px, 300px);
+
+  .awesome_team_text {
+    text-align: center;
+  }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 50px;
+
+  @include dimensions(70%, 650px);
+  @include possitionTopLeft(relative, 0px, 50%);
+  transform: translate(-50%);
+
+  p {
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+  }
+
+  .column_1 {
+    display: grid;
+    
+    .img_3 {
+      @include image("../../assets/images/about/img_3.png", 50% 100%, 78%);
+      @include dimensions(350px, 450px);
+      background-color: #efefef;
+    }
+  }
+  
+  .column_2 {
+    display: grid;
+  
+    .img_4 {
+      @include image("../../assets/images/about/img_4.png", center, 70%);
+      @include dimensions(350px, 450px);
+      background-color: #efefef;
+    }
+  }
+  
+  .column_3 {
+    display: grid;
+  
+    .img_5 {
+      @include image("../../assets/images/about/img_5.png", 20% 15%, 130%);
+      @include dimensions(350px, 450px);
+      background-color: #efefef;
+    }
+  }
+}

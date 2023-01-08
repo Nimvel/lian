@@ -15,8 +15,77 @@
   background-size: $size;
 }
 
+@mixin font($family, $color, $size, $transform, $align) {
+  font-family: $family; 
+  color: $color;
+  font-size: $size;
+  text-transform: $transform;
+  text-align: $align;
+}
+
 .App {
   user-select: none;
+
+  .p {
+    margin-top: 0; 
+    margin-bottom: 0;
+  }
+
+  .block_1 {
+    background-color: black;
+
+    .text_1 {
+      @include font("Lato-Light", white, 48px, uppercase, center);
+    
+      @include possitionTopLeft(relative, 50%, 50%);
+      transform: translate(-50%, -50%);
+      word-spacing: 15px;
+    }
+  }
+
+  .text_2 {
+    @include font("Lato-Light", black, 18px, uppercase, center);
+    letter-spacing: 6px;
+  }
+
+  .bold_text {
+    @include font("Roboto-Bold", #4d4d4d, 16px, none, left);
+  }
+
+  .large_text {
+    @include font("Lato-Regular", black, 28px, uppercase, center);
+    letter-spacing: 16px;
+    line-height: 2;
+  }
+
+  .name {
+    @include font("Lato-Regular", black, 28px, uppercase, left);
+  }
+
+  .plain_text {
+    @include font("Roboto-Regular", #b5b5b5, 14px, none, left);
+    line-height: 2;
+  }
+
+  .navbar {
+    display: flex;
+
+    @include font("Roboto-Bold", grey, 14px, uppercase, center);
+
+    .active {
+        color: black;
+        text-decoration: none;
+    }
+
+    .item {
+        color: grey;
+        text-decoration: none;
+    }
+    .item:hover {
+        color: black;
+        text-decoration: none;
+    }
+  }
 }
 
 .content {
@@ -27,6 +96,12 @@
   /* Roboto-Bold */
   font-family: "Roboto-Bold"; 
   src: url("./assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  } 
+
+@font-face {
+  /* Roboto-Regular */
+  font-family: "Roboto-Regular"; 
+  src: url("./assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
   } 
 
 @font-face {

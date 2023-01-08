@@ -7,13 +7,17 @@ const Header = () => {
         <div className={s.header}>
             <div className={s.logo}></div>
 
-            <div className={s.navbar}>
+            <div className={`navbar ${s.navbar}`}>
                 <span>
-                <NavLink to='/home' className={linkActive => linkActive.isActive ? s.active : s.item} >
-                home
-                </NavLink>
-        </span>
-                <span>about</span>
+                    <NavLink to='/home' className={linkActive => linkActive.isActive ? 'active' : 'item'} >
+                        home
+                    </NavLink>
+                </span>
+                <span>
+                    <NavLink to='/about' className={linkActive => linkActive.isActive ? 'active' : 'item'} >
+                        about
+                    </NavLink>
+                </span>
                 <span>portfolio</span>
                 <span>blog</span>
                 <span>contact</span>

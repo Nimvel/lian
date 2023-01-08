@@ -5,14 +5,14 @@ const Home = () => {
         <div className={s.home}>
             <div className={s.background}></div>
 
-            <div className={s.lian_creative_agency_block}>
-                <div className={s.lian_creative_agency}>lian creative agency</div>
+            <div className={`block_1 ${s.lian_creative_agency}`}>
+                <div className='text_1'>lian creative agency</div>
             </div>
-            <div className={s.minimal_freelance_portfolio}>minimal freelance portfolio</div>
 
+            <div className={`text_2 ${s.minimal_freelance_portfolio}`}>minimal freelance portfolio</div>
             
             <div className={s.navbar_block}>
-            <div className={s.navbar}>
+            <div className={`navbar ${s.navbar}`}>
                 <span className={s.item}>all</span>
                 <span className={s.item}>logo</span>
                 <span className={s.item}>mobile app</span>
