@@ -64,14 +64,43 @@
     @include dimensions(500px, 500px);
   }
 
+  .skill_value_block {
+    @include font("Lato-Light", white, 16px, uppercase, center);
+    @include dimensions(40px, 22px);
+    background-color: black;
+    border-radius: 2px;
+  }
+
+  .skill_value_block:before {
+      border: 10px solid transparent;
+      border-left-color:black;
+      @include possitionTopLeft(absolute, 10px, 0);
+      content:'';
+    }
+
   .photoshop_line {width: 90%}
   .photoshop_circle {left: 90%}
+  .photoshop_skill {
+    @include possitionTopLeft(relative, -50px, 91%);
+  }
+
   .branding_line {width: 95%}
   .branding_circle {left: 95%}
+  .branding_skill {
+    @include possitionTopLeft(relative, -50px, 96%);
+  }
+
   .photography_line {width: 50%}
   .photography_circle {left: 50%}
+  .photography_skill {
+    @include possitionTopLeft(relative, -50px, 51%);
+  }
+
   .design_line {width: 85%}
   .design_circle {left: 85%}
+  .design_skill {
+    @include possitionTopLeft(relative, -50px, 86%);
+  }
 }
 
 .awesome_team_block {
@@ -98,6 +127,8 @@
     margin-left: 20px;
     margin-bottom: 0px;
   }
+
+  .plain_text { width: 80%; }
 
   .column_1 {
     display: grid;

@@ -9,17 +9,22 @@ type BlogPostProps = {
 const BlogPost: FC<BlogPostProps> = ({ withImage }) => {
     return (
         <div>
+
             <p className='bold_text'>
                 {withImage ? 'I am a Blog Post with an Awesome Image' : 'I am a Blog Post Title'}
             </p>
-            <p className='?'>by Jenn Pereira</p>
+            <p className='?'>
+                <span className="material-symbols-outlined">person</span>
+                by Jenn Pereira</p>
             <p className='plain_text'>
                 Phasellus et nisl tellus. Etiam facilisis eu nisi scelerisque faucibus.
                 Proin semper suscipit magna, nec imperdiet lacus semper vitae.
                 Sed hendrerit enim non justo posuere placerat eget purus mauris.
                 {withImage ? '..' : 'Etiam facilisis eu nisi scelerisque faucibus...'}
             </p>
-            <p className='?'>on July 19, 2016</p>
+            <p className='?'>
+                <span className="material-symbols-outlined">calendar_today</span>
+                on July 19, 2016</p>
         </div>
     )
 }
@@ -58,7 +63,7 @@ const Blog = () => {
                     <div className={s.recent_posts_block}>
                         <div className={s.title}>
                             <div className={`text_2 ${s.title_text}`}>recent posts</div>
-                            </div>
+                        </div>
                         <div className={s.post_block}>
                             <div className={s.img_1_1}></div>
                             <p className='bold_text'>Lorem ipsum dolor sit amet, consec</p>
@@ -79,39 +84,39 @@ const Blog = () => {
                             <p className='bold_text'>Ut wisi enim ad minim veniam, quis</p>
                             <p className='plain_text'>July 17, 2016</p>
                         </div>
-                        </div>
+                    </div>
 
-                        <div className={s.popular_tags_block}>
+                    <div className={s.popular_tags_block}>
                         <div className={s.title}>
                             <div className={`text_2 ${s.title_text}`}>popular tags</div>
-                            </div>
-                            <div className={s.tags}>
-                                <div className={s.tag}>construction</div>
-                                <div className={s.tag}>engineering</div>
-                                <div className={s.tag}>architecture</div>
-                                <div className={s.tag}></div>
-                                <div className={s.tag}>civil engineer</div>
-                                <div className={s.tag}>industrial</div>
-                                <div className={s.tag}>management</div>
-                                <div className={s.tag}></div>
-                            </div>
+                        </div>
+                        <div className={s.tags}>
+                            <div className={`plain_text ${s.tag}`}>construction</div>
+                            <div className={`plain_text ${s.tag}`}>engineering</div>
+                            <div className={`plain_text ${s.tag}`}>architecture</div>
+                            <div className={`plain_text ${s.tag}`}>structural design</div>
+                            <div className={`plain_text ${s.tag}`}>civil engineer</div>
+                            <div className={`plain_text ${s.tag}`}>industrial</div>
+                            <div className={`plain_text ${s.tag}`}>management</div>
+                            <div className={`plain_text ${s.tag}`}>mechanical</div>
+                        </div>
 
-                            <div className={s.instagram_block}>
+                        <div className={s.instagram_block}>
                             <div className={s.title}>
-                            <div className={`text_2 ${s.title_text}`}>instagram</div>
+                                <div className={`text_2 ${s.title_text}`}>instagram</div>
                             </div>
-                                <div className={s.images}>
-                                    <div className={s.img_2_1} />
-                                    <div className={s.img_2_2} />
-                                    <div className={s.img_2_3} />
-                                    <div className={s.img_2_4} />
-                                    <div className={s.img_2_5} />
-                                    <div className={s.img_2_6} />
-                                    <div className={s.img_2_7} />
-                                    <div className={s.img_2_8} />
-                                    <div className={s.img_2_9} />
-                                </div>
+                            <div className={s.images}>
+                                <div className={s.img_2_1} />
+                                <div className={s.img_2_2} />
+                                <div className={s.img_2_3} />
+                                <div className={s.img_2_4} />
+                                <div className={s.img_2_5} />
+                                <div className={s.img_2_6} />
+                                <div className={s.img_2_7} />
+                                <div className={s.img_2_8} />
+                                <div className={s.img_2_9} />
                             </div>
+                        </div>
 
                     </div>
                 </div>

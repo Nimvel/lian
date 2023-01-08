@@ -162,14 +162,32 @@
     }
 
     .popular_tags_block {
-      .popular_tags {}
       .tags {
-        .tag {}
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-content: center;
+
+        @include dimensions(100%, 180px);
+
+        .tag {
+          padding: 5px 15px;
+          justify-items: center;
+          line-height: 1.3;
+
+          border: solid 1px #dadada;
+          border-radius: 3px;
+          @include dimensions(null, 20px);
+        }
+
+        .tag:hover {
+          background-color: black;
+          color: white;
+        }
       }
     }
 
     .instagram_block {
-      .instagram {}
       .images {
         display: grid;
         gap: 5px;

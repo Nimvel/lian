@@ -116,6 +116,15 @@
   position: relative;
 }
 
+.material-symbols-outlined {
+  @include possitionTopLeft(relative, 5px, null);
+  font-variation-settings:
+  'FILL' 218,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 0
+}
+
 @font-face {
   /* Roboto-Bold */
   font-family: "Roboto-Bold"; 
