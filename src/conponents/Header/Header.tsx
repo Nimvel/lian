@@ -24,7 +24,11 @@ const Header = () => {
                         blog
                     </NavLink>
                 </span>
-                <span>contact</span>
+                <span>
+                    <NavLink to='/contact' className={linkActive => linkActive.isActive ? 'active' : 'item'} >
+                        contact
+                    </NavLink>
+                </span>
             </div>
         </div>
     )

@@ -32,13 +32,13 @@ const BlogPost: FC<BlogPostProps> = ({ withImage }) => {
 const Blog = () => {
     return (
         <div className={s.blog}>
-            <div className={s.header}>
-                <div className={`text_block ${s.news_about_lian}`}>
+            <div className='content_header'>
+                <div className={`text_block text_1 ${s.news_about_lian}`}>
                     <div className='text'>news about lian</div>
                 </div>
 
-                <div className={`text_2 ${s.latest_news}`}>latest news & insights</div>
-                <div className={s.img_1}></div>
+                <div className={`middle_text  text_2 ${s.latest_news}`}>latest news & insights</div>
+                <div className={`background ${s.img_1}`}></div>
             </div>
 
 
@@ -62,7 +62,7 @@ const Blog = () => {
                     <input className={s.search} placeholder='Search' />
                     <div className={s.recent_posts_block}>
                         <div className={s.title}>
-                            <div className={`text_2 ${s.title_text}`}>recent posts</div>
+                            <div className={`middle_text ${s.title_text}`}>recent posts</div>
                         </div>
                         <div className={s.post_block}>
                             <div className={s.img_1_1}></div>
@@ -88,7 +88,7 @@ const Blog = () => {
 
                     <div className={s.popular_tags_block}>
                         <div className={s.title}>
-                            <div className={`text_2 ${s.title_text}`}>popular tags</div>
+                            <div className={`middle_text ${s.title_text}`}>popular tags</div>
                         </div>
                         <div className={s.tags}>
                             <div className={`plain_text ${s.tag}`}>construction</div>
@@ -103,7 +103,7 @@ const Blog = () => {
 
                         <div className={s.instagram_block}>
                             <div className={s.title}>
-                                <div className={`text_2 ${s.title_text}`}>instagram</div>
+                                <div className={`middle_text ${s.title_text}`}>instagram</div>
                             </div>
                             <div className={s.images}>
                                 <div className={s.img_2_1} />

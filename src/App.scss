@@ -43,7 +43,7 @@
     }
   }
 
-  .text_2 {
+  .middle_text {
     @include font("Lato-Light", black, 18px, uppercase, center);
     letter-spacing: 6px;
   }
@@ -67,28 +67,31 @@
     line-height: 2;
   }
 
-  .skillbar {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    @include dimensions(100%, 18px);
-    background-color: #f6f6f8;
+}
 
-    .line {
-      margin-left: 5px;
-      @include possitionTopLeft(relative, 50%, 0);
-      transform: translate(0, -50%);
-      height: 3px;
-      background-color: #aeaeae;
-      z-index: 0;
-    }
+.content {
+  position: relative;
+}
 
-    .circle {
-      @include dimensions(6px, 6px);
-      border: solid 5px #2c2c2c;
-      border-radius: 50%;
-      @include possitionTopLeft(relative, 0, null);
-      z-index: 2;
-    }
+.content_header {
+  background-color: #f6f6f8;
+  @include dimensions(100%, 400px);
+
+  .text_1 {
+    @include possitionTopLeft(relative, 100px, 15%);
+    height: 58px;
+    z-index: 1;
+  }
+  
+  .text_2 {
+    @include possitionTopLeft(relative, 130px, 15%);
+    height: 28px;
+    z-index: 1;
+  }
+  
+  .background {
+    @include possitionTopLeft(absolute, 0px, null);
+    right: 0px;
   }
 }
 
@@ -112,9 +115,64 @@
   }
 }
 
-.content {
-  position: relative;
+.skillbar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  @include dimensions(100%, 18px);
+  background-color: #f6f6f8;
+
+  .line {
+    margin-left: 5px;
+    @include possitionTopLeft(relative, 50%, 0);
+    transform: translate(0, -50%);
+    height: 3px;
+    background-color: #aeaeae;
+    z-index: 0;
+  }
+
+  .circle {
+    @include dimensions(6px, 6px);
+    border: solid 5px #2c2c2c;
+    border-radius: 50%;
+    @include possitionTopLeft(relative, 0, null);
+    z-index: 2;
+  }
 }
+
+.central_text_block {
+  @include possitionTopLeft(relative, 100px, 50%);
+  transform: translate(-50%);
+  @include dimensions(600px, 300px);
+
+  .central_text {
+    text-align: center;
+  }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 50px;
+
+  @include dimensions(70%, 650px);
+  @include possitionTopLeft(relative, 0px, 50%);
+  transform: translate(-50%);
+
+  .plain_text { width: 80%; }
+
+  .column_1 {
+    display: grid;
+  }
+  
+  .column_2 {
+    display: grid;
+  }
+  
+  .column_3 {
+    display: grid;
+  }
+}
+
 
 .material-symbols-outlined {
   @include possitionTopLeft(relative, 5px, null);

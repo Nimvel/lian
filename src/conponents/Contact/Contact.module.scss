@@ -1,0 +1,131 @@
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin possitionTopLeft($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+@mixin image($url, $position, $size) {
+  background: url($url) no-repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin font($family, $color, $size, $transform, $align) {
+  font-family: $family;
+  color: $color;
+  font-size: $size;
+  text-transform: $transform;
+  text-align: $align;
+}
+
+.contact {
+  @include dimensions(100%, 1900px);
+
+  .get_in_touch {
+    width: 420px;
+  }
+  
+  .contact_us_today {
+    width: 270px;
+  }
+  
+  .img_1 {
+    @include image("../../assets/images/about/img_1.png", 100% 30%, 110%);
+    @include dimensions(900px, 400px);
+  }
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  @include possitionTopLeft(relative, 0, 50%);
+  transform: translate(-50%);
+  @include dimensions(70%, 250px);
+
+  .column_1 {
+    p {
+      color: #2e2e2e;
+    }
+  }
+
+  .column_2 {
+    display: grid;
+    grid-template-areas: 
+    'name email'
+    'message message'
+    'send_message null';
+
+    box-sizing: border-box;
+
+    .placeholder {
+      @include font("Lato-Regular", black, 14px, none, left);
+      font-style: italic;
+    }
+
+    textarea {
+      grid-area: message;
+      padding: 5px 10px;
+      @include dimensions(100%, 200px);
+    }
+
+    input {
+      padding: 0 10px;
+      width: 100%;
+      height: 20px;
+    }
+
+    button {
+      background-color: black;
+      @include font("Roboto-Bold", white, 16px, uppercase, center);
+      @include dimensions(150px, 30px);
+      border-radius: 3px;
+    }
+  }
+}
+
+.img_2 {
+    @include image("../../assets/images/contact/img_2.png", center, cover);
+    @include possitionTopLeft(relative, 80px, 0);
+    @include dimensions(100%, 400px);
+    filter: grayscale(100);
+
+    .box {
+      background-color: white;
+      @include possitionTopLeft(relative, 50%, 50%);
+      transform: translate(-50%, -50%);
+      @include dimensions(300px, 150px);
+      padding: 10px;
+
+      p {
+        text-align: center;
+      }
+    }
+}
+
+.columns {
+  height: 450px;
+
+  .title {
+    font-size: 18px;
+  }
+
+  .img_3 {
+    @include image("../../assets/images/contact/img_3.png", center, cover);
+    @include dimensions(350px, 250px);
+  }
+  
+  .img_4 {
+    @include image("../../assets/images/contact/img_4.png", center, cover);
+    @include dimensions(350px, 250px);
+  }
+  
+  .img_5 {
+    @include image("../../assets/images/contact/img_5.png", center, cover);
+    @include dimensions(350px, 250px);
+  }
+}

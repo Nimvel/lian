@@ -3,19 +3,19 @@ import s from './About.module.scss'
 const About = () => {
     return (
         <div className={s.about}>
-            <div className={s.header}>
-                <div className={`text_block ${s.about_the_agency}`}>
+            <div className={`content_header`}>
+                <div className={`text_block text_1 ${s.about_the_agency}`}>
                     <div className='text'>about the agency</div>
                 </div>
 
-                <div className={`text_2 ${s.welcome_to_lian}`}>welcome to lian</div>
-                <div className={s.img_1}></div>
+                <div className={`middle_text text_2 ${s.welcome_to_lian}`}>welcome to lian</div>
+                <div className={`background ${s.img_1}`} />
             </div>
 
             <div className={s.block_1}>
                 <div className={s.img_2}></div>
                 <div>
-                    <div className={`text_2`}>our story</div>
+                    <div className='middle_text'>our story</div>
                     <p className='plain_text'>
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                         sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -27,7 +27,7 @@ const About = () => {
                         Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.
                     </p>
                     <div>
-                        <div className={`text_2`}>our skills</div>
+                        <div className='middle_text'>our skills</div>
                         <div className='bold_text'>Photoshop</div>
                         <div className='skillbar'>
                             <div className={`line ${s.photoshop_line}`} />
@@ -60,16 +60,16 @@ const About = () => {
                 </div>
             </div>
 
-            <div className={s.awesome_team_block}>
+            <div className='central_text_block'>
 
                 <div className='large_text'>Awesome Team</div>
-                <p className={`plain_text ${s.awesome_team_text}`}>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                <p className='plain_text central_text'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
                     Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p>
             </div>
 
-            <div className={s.columns}>
-                <div className={s.column_1}>
+            <div className={`columns ${s.columns}`}>
+                <div className='column_1'>
                     <div className={s.img_3}></div>
                     <p className='name'>Lian Joy</p>
                     <p className='bold_text'>CEO/Founder</p>
@@ -78,7 +78,7 @@ const About = () => {
                         sed diam nonu mmy nibh euis mod tinci
                     </p>
                 </div>
-                <div className={s.column_2}>
+                <div className='column_2'>
                     <div className={s.img_4}></div>
                     <p className='name'>Albert Thanh</p>
                     <p className='bold_text'>CEO/Founder</p>
@@ -88,7 +88,7 @@ const About = () => {
                     </p>
                 </div>
 
-                <div className={s.column_3}>
+                <div className='column_3'>
                     <div className={s.img_5}></div>
                     <p className='name'>Jenn Pereira</p>
                     <p className='bold_text'>CEO/Founder</p>

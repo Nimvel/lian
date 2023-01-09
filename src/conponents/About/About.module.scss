@@ -16,7 +16,7 @@
 }
 
 @mixin font($family, $color, $size, $transform, $align) {
-  font-family: $family; 
+  font-family: $family;
   color: $color;
   font-size: $size;
   text-transform: $transform;
@@ -25,28 +25,17 @@
 
 .about {
   @include dimensions(100%, 1900px);
-}
-
-.header {
-  background-color: #f6f6f8;
-  @include dimensions(100%, 400px);
 
   .about_the_agency {
-    @include possitionTopLeft(relative, 100px, 15%);
-    @include dimensions(560px, 58px);
-    z-index: 1;
+    width: 560px;
   }
   
   .welcome_to_lian {
-    @include possitionTopLeft(relative, 130px, 15%);
-    @include dimensions(260px, 28px);
-    z-index: 1;
+    width: 260px;
   }
   
   .img_1 {
     @include image("../../assets/images/about/img_1.png", 100% 30%, 110%);
-    @include possitionTopLeft(absolute, 0px, null);
-    right: 0px;
     @include dimensions(900px, 400px);
   }
 }
@@ -72,91 +61,81 @@
   }
 
   .skill_value_block:before {
-      border: 10px solid transparent;
-      border-left-color:black;
-      @include possitionTopLeft(absolute, 10px, 0);
-      content:'';
-    }
+    border: 10px solid transparent;
+    border-left-color: black;
+    @include possitionTopLeft(absolute, 10px, 0);
+    content: '';
+  }
 
-  .photoshop_line {width: 90%}
-  .photoshop_circle {left: 90%}
+  .photoshop_line {
+    width: 90%
+  }
+
+  .photoshop_circle {
+    left: 90%
+  }
+
   .photoshop_skill {
     @include possitionTopLeft(relative, -50px, 91%);
   }
 
-  .branding_line {width: 95%}
-  .branding_circle {left: 95%}
+  .branding_line {
+    width: 95%
+  }
+
+  .branding_circle {
+    left: 95%
+  }
+
   .branding_skill {
     @include possitionTopLeft(relative, -50px, 96%);
   }
 
-  .photography_line {width: 50%}
-  .photography_circle {left: 50%}
+  .photography_line {
+    width: 50%
+  }
+
+  .photography_circle {
+    left: 50%
+  }
+
   .photography_skill {
     @include possitionTopLeft(relative, -50px, 51%);
   }
 
-  .design_line {width: 85%}
-  .design_circle {left: 85%}
+  .design_line {
+    width: 85%
+  }
+
+  .design_circle {
+    left: 85%
+  }
+
   .design_skill {
     @include possitionTopLeft(relative, -50px, 86%);
   }
 }
 
-.awesome_team_block {
-  @include possitionTopLeft(relative, 100px, 50%);
-  transform: translate(-50%);
-  @include dimensions(600px, 300px);
-
-  .awesome_team_text {
-    text-align: center;
-  }
-}
-
 .columns {
-  display: grid;
-  grid-template-columns: 30% 30% 30%;
-  gap: 50px;
-
-  @include dimensions(70%, 650px);
-  @include possitionTopLeft(relative, 0px, 50%);
-  transform: translate(-50%);
-
-  p {
-    margin-top: 0px;
+   p {
     margin-left: 20px;
-    margin-bottom: 0px;
   }
 
-  .plain_text { width: 80%; }
-
-  .column_1 {
-    display: grid;
-    
-    .img_3 {
-      @include image("../../assets/images/about/img_3.png", 50% 100%, 78%);
-      @include dimensions(350px, 450px);
-      background-color: #efefef;
-    }
+  .img_3 {
+    @include image("../../assets/images/about/img_3.png", 50% 100%, 78%);
+    @include dimensions(350px, 450px);
+    background-color: #efefef;
   }
   
-  .column_2 {
-    display: grid;
-  
-    .img_4 {
-      @include image("../../assets/images/about/img_4.png", center, 70%);
-      @include dimensions(350px, 450px);
-      background-color: #efefef;
-    }
+  .img_4 {
+    @include image("../../assets/images/about/img_4.png", center, 70%);
+    @include dimensions(350px, 450px);
+    background-color: #efefef;
   }
   
-  .column_3 {
-    display: grid;
-  
-    .img_5 {
-      @include image("../../assets/images/about/img_5.png", 20% 15%, 130%);
-      @include dimensions(350px, 450px);
-      background-color: #efefef;
-    }
+  .img_5 {
+    @include image("../../assets/images/about/img_5.png", 20% 15%, 130%);
+    @include dimensions(350px, 450px);
+    background-color: #efefef;
   }
 }

@@ -79,11 +79,6 @@
     transform: translate(-50%, -50%);
 
     @include dimensions(750px, 15px);
-
-    .item:hover {
-      color: black;
-      cursor: pointer;
-    }
   }
 }
 
@@ -104,6 +99,10 @@
     @include possitionTopLeft(absolute, 0, 0);
     right: 0; 
     bottom: 0; 
+
+    width: 350px;
+
+    // @include font("Lato-Regular", black, 28px, uppercase, center);
 
     background: rgba(0, 0, 0, 0.5);  
     opacity: 0; 

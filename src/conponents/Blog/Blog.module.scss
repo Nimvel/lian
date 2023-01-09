@@ -16,7 +16,7 @@
 }
 
 @mixin font($family, $color, $size, $transform, $align) {
-  font-family: $family; 
+  font-family: $family;
   color: $color;
   font-size: $size;
   text-transform: $transform;
@@ -27,28 +27,17 @@
   @include dimensions(100%, 1900px);
 }
 
-.header {
-  background-color: #f6f6f8;
-  @include dimensions(100%, 400px);
+.news_about_lian {
+  width: 560px;
+}
 
-  .news_about_lian {
-    @include possitionTopLeft(relative, 100px, 15%);
-    @include dimensions(560px, 58px);
-    z-index: 1;
-  }
-  
-  .latest_news {
-    @include possitionTopLeft(relative, 130px, 15%);
-    @include dimensions(350px, 28px);
-    z-index: 1;
-  }
-  
-  .img_1 {
-    @include image("../../assets/images/blog/img_1.png", 70% 45%, 90%);
-    @include possitionTopLeft(absolute, 0px, null);
-    right: 0px;
-    @include dimensions(100%, 300px);
-  }
+.latest_news {
+  width: 350px;
+}
+
+.img_1 {
+  @include image("../../assets/images/blog/img_1.png", 70% 45%, 90%);
+  @include dimensions(100%, 300px);
 }
 
 .columns {
@@ -79,7 +68,7 @@
       @include dimensions(150px, 30px);
       border-radius: 3px;
     }
-    
+
     .img_2 {
       @include image("../../assets/images/blog/img_2.png", 50%, 170%);
       @include dimensions(350px, 300px);
@@ -90,25 +79,27 @@
       @include dimensions(350px, 300px);
     }
   }
-  
+
   .column_2 {
     display: grid;
     gap: 30px;
-  
+
     .img_4 {
       @include image("../../assets/images/blog/img_4.png", center, cover);
       @include dimensions(350px, 250px);
     }
+
     .img_5 {
       @include image("../../assets/images/blog/img_5.png", 60%, 150%);
       @include dimensions(350px, 250px);
     }
+
     .img_6 {
       @include image("../../assets/images/blog/img_6.png", 20% 80%, 190%);
       @include dimensions(350px, 250px);
     }
   }
-  
+
   .column_3 {
     display: grid;
     gap: 30px;
@@ -124,15 +115,17 @@
       }
     }
 
-    .search {}
+    .search {
+      border: none;
+    }
 
     .recent_posts_block {
 
       .post_block {
         display: grid;
-        grid-template-areas: 
-        'img bold_text'
-        'img data';
+        grid-template-areas:
+          'img bold_text'
+          'img data';
 
         @include possitionTopLeft(relative, 30px, 0);
         @include dimensions(100%, 100px);
@@ -143,16 +136,19 @@
           @include dimensions(100px, 80px);
           background-color: red;
         }
+
         .img_1_2 {
           grid-area: img;
           @include image("../../assets/images/blog/img_1_2.png", 68% 57%, 500%);
           @include dimensions(100px, 80px);
         }
+
         .img_1_3 {
           grid-area: img;
           @include image("../../assets/images/blog/img_1_3.png", 15% 40%, 150%);
           @include dimensions(100px, 80px);
         }
+
         .img_1_4 {
           grid-area: img;
           @include image("../../assets/images/blog/img_1_4.png", 5% 15%, 140%);
@@ -202,34 +198,42 @@
           @include image("../../assets/images/blog/img_2_1.png", 10%, none);
           @include dimensions(100px, 80px);
         }
+
         .img_2_2 {
           @include image("../../assets/images/blog/img_2_2.png", 60%, none);
           @include dimensions(100px, 80px);
         }
+
         .img_2_3 {
           @include image("../../assets/images/blog/img_2_3.png", 65% 60%, none);
           @include dimensions(100px, 80px);
         }
+
         .img_2_4 {
           @include image("../../assets/images/blog/img_2_4.png", 50%, none);
           @include dimensions(100px, 80px);
         }
+
         .img_2_5 {
           @include image("../../assets/images/blog/img_2_5.png", 0 70%, none);
           @include dimensions(100px, 80px);
         }
+
         .img_2_6 {
           @include image("../../assets/images/blog/img_2_6.png", 5% 30%, none);
           @include dimensions(100px, 80px);
         }
+
         .img_2_7 {
           @include image("../../assets/images/blog/img_2_7.png", 50% 10%, none);
           @include dimensions(100px, 80px);
         }
+
         .img_2_8 {
           @include image("../../assets/images/blog/img_2_8.png", 90% 50%, none);
           @include dimensions(100px, 80px);
         }
+
         .img_2_9 {
           @include image("../../assets/images/blog/img_2_9.png", 40% 90%, none);
           @include dimensions(100px, 80px);

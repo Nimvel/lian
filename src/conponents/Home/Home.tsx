@@ -9,20 +9,20 @@ const Home = () => {
                 <div className='text'>lian creative agency</div>
             </div>
 
-            <div className={`text_2 ${s.minimal_freelance_portfolio}`}>minimal freelance portfolio</div>
-            
+            <div className={`middle_text ${s.minimal_freelance_portfolio}`}>minimal freelance portfolio</div>
+
             <div className={s.navbar_block}>
-            <div className={`navbar ${s.navbar}`}>
-                <span className={s.item}>all</span>
-                <span className={s.item}>logo</span>
-                <span className={s.item}>mobile app</span>
-                <span className={s.item}>wordpress</span>
-                <span className={s.item}>web design</span>
-                <span className={s.item}>ui/ix</span>
-                <span className={s.item}>branding</span>
+                <div className={`navbar ${s.navbar}`}>
+                    <span className='item'>all</span>
+                    <span className='item'>logo</span>
+                    <span className='item'>mobile app</span>
+                    <span className='item'>wordpress</span>
+                    <span className='item'>web design</span>
+                    <span className='item'>ui/ix</span>
+                    <span className='item'>branding</span>
+                </div>
             </div>
-            </div>
-            
+
 
             <div className={s.images}>
 

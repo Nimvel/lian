@@ -32,24 +32,8 @@
 }
 
 .navbar {
-    // display: flex;
     gap: 50px;
 
-    // @include font("Roboto-Bold", grey, 14px, uppercase, center);
     @include possitionTopLeft(absolute, 37px, 50%);
     @include dimensions(530px, 15px);
-
-    // .active {
-    //     color: black;
-    //     text-decoration: none;
-    // }
-
-    // .item {
-    //     color: grey;
-    //     text-decoration: none;
-    // }
-    // .item:hover {
-    //     color: black;
-    //     text-decoration: none;
-    // }
   }
