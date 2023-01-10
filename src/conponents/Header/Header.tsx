@@ -18,7 +18,9 @@ const Header = () => {
                         about
                     </NavLink>
                 </span>
-                <span>portfolio</span>
+                <span><NavLink to='/portfolio' className={linkActive => linkActive.isActive ? 'active' : 'item'} >
+                    portfolio
+                </NavLink></span>
                 <span>
                     <NavLink to='/blog' className={linkActive => linkActive.isActive ? 'active' : 'item'} >
                         blog

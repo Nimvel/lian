@@ -28,28 +28,28 @@ const About = () => {
                     </p>
                     <div>
                         <div className='middle_text'>our skills</div>
-                        <div className='bold_text'>Photoshop</div>
+                        <div className='title'>Photoshop</div>
                         <div className='skillbar'>
                             <div className={`line ${s.photoshop_line}`} />
                             <div className={`circle ${s.photoshop_circle}`} />
                             <div className={`${s.skill_value_block} ${s.photoshop_skill}`}>90%</div>
                         </div>
 
-                        <div className='bold_text'>Branding</div>
+                        <div className='title'>Branding</div>
                         <div className='skillbar'>
                             <div className={`line ${s.branding_line}`} />
                             <div className={`circle ${s.branding_circle}`} />
                             <div className={`${s.skill_value_block} ${s.branding_skill}`}>95%</div>
                         </div>
 
-                        <div className='bold_text'>Photography</div>
+                        <div className='title'>Photography</div>
                         <div className='skillbar'>
                             <div className={`line ${s.photography_line}`} />
                             <div className={`circle ${s.photography_circle}`} />
                             <div className={`${s.skill_value_block} ${s.photography_skill}`}>50%</div>
                         </div>
 
-                        <div className='bold_text'>Web Design</div>
+                        <div className='title'>Web Design</div>
                         <div className='skillbar'>
                             <div className={`line ${s.design_line}`} />
                             <div className={`circle ${s.design_circle}`} />
@@ -69,29 +69,29 @@ const About = () => {
             </div>
 
             <div className={`columns ${s.columns}`}>
-                <div className='column_1'>
+                <div>
                     <div className={s.img_3}></div>
                     <p className='name'>Lian Joy</p>
-                    <p className='bold_text'>CEO/Founder</p>
+                    <span>CEO/Founder</span>
                     <p className={`plain_text ${s.plain_text}`}>
                         Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit,
                         sed diam nonu mmy nibh euis mod tinci
                     </p>
                 </div>
-                <div className='column_2'>
+                <div>
                     <div className={s.img_4}></div>
                     <p className='name'>Albert Thanh</p>
-                    <p className='bold_text'>CEO/Founder</p>
+                    <span>CEO/Founder</span>
                     <p className={`plain_text ${s.plain_text}`}>
                         Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit,
                         sed diam nonu mmy nibh euis mod tinci
                     </p>
                 </div>
 
-                <div className='column_3'>
+                <div>
                     <div className={s.img_5}></div>
                     <p className='name'>Jenn Pereira</p>
-                    <p className='bold_text'>CEO/Founder</p>
+                    <span>CEO/Founder</span>
                     <p className={`plain_text ${s.plain_text}`}>
                         Lorem ipsum dolor sit amet, conse ctetuer adipi scing elit,
                         sed diam nonu mmy nibh euis mod tinci

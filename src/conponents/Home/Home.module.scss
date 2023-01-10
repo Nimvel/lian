@@ -24,19 +24,19 @@
 }
 
 .home {
-  @include dimensions(100%, 2230px);
+  @include dimensions(100vw, 140vw);
 
   button {
-    @include possitionTopLeft(relative, 870px, 50%);
+    @include possitionTopLeft(relative, 52vw, 50%);
     transform: translate(-50%);
 
-    @include dimensions(130px, 25px);
+    @include dimensions(8vw, 2vw);
 
-    @include font("Roboto-Bold", black, 12px, uppercase, center);
+    @include font("Roboto-Bold", black, 1vw, uppercase, center);
 
     border: none;
     background-color: #a4a4a4;
-    border-radius: 3px;
+    border-radius: 0.2vw;
     color: white;
 
   }
@@ -45,54 +45,58 @@
     cursor: pointer;
     background-color: #bebebe;
   }
-}
 
-.background {
-  @include image("../../assets/images/home/main_background.png", center, cover);
-  @include possitionTopLeft(absolute, 0px, 0px);
-  @include dimensions(100%, 700px);
-}
-
-.lian_creative_agency {
-  @include possitionTopLeft(absolute, 260px, 50%);
-  transform: translate(-50%);
-
-  @include dimensions(650px, 58px);
-}
-
-.minimal_freelance_portfolio {
-  @include possitionTopLeft(absolute, 350px, 50%);
-  transform: translate(-50%);
+  .background {
+    @include image("../../assets/images/home/main_background.png", center, cover);
+    @include possitionTopLeft(absolute, 0, 0);
+    @include dimensions(100%, 35vw);
+  }
+  
+  .lian_creative_agency {
+    @include possitionTopLeft(absolute, 14vw, 50%);
+    transform: translate(-50%);
+  
+    @include dimensions(45vw, 4vw);
+  }
+  
+  .minimal_freelance_portfolio {
+    @include possitionTopLeft(absolute, 20vw, 50%);
+    transform: translate(-50%);
+  }
 }
 
 .navbar_block {
-  border-bottom: solid 1px #dfdfdf;
-  border-top: solid 1px #dfdfdf;
+  border-bottom: solid 0.1vw #dfdfdf;
+  border-top: solid 0.1vw #dfdfdf;
 
-  @include dimensions(100%, 70px);
-  @include possitionTopLeft(relative, 750px, 0);
+  @include dimensions(100%, 5vw);
+  @include possitionTopLeft(relative, 37vw, 0);
 
   .navbar {
-    gap: 55px;
+    gap: 3.3vw;
   
     @include possitionTopLeft(relative, 50%, 50%);
     transform: translate(-50%, -50%);
 
-    @include dimensions(750px, 15px);
+    @include dimensions(50vw, 1.5vw);
   }
 }
 
 .images {
   display: grid;
-  gap: 50px;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 23vw 23vw 23vw;
+  gap: 2vw;
 
-  @include possitionTopLeft(relative, 800px, 50%);
+  @include possitionTopLeft(relative, 39vw, 50%);
   transform: translate(-50%);
 
-  @include dimensions(75%, 1230px);
+  @include dimensions(73vw, 70vw);
 
-  a { display: block; position: relative; cursor: pointer;}
+  a { 
+    display: block; 
+    position: relative; 
+    cursor: pointer;
+  }
 
   a:after { 
     content: ''; 
@@ -100,9 +104,7 @@
     right: 0; 
     bottom: 0; 
 
-    width: 350px;
-
-    // @include font("Lato-Regular", black, 28px, uppercase, center);
+    width: 23vw;
 
     background: rgba(0, 0, 0, 0.5);  
     opacity: 0; 
@@ -112,69 +114,82 @@
 
   .column_1 {
     display: grid;
-    align-items: end;
-    height: 1100px;
+    gap: 2vw;
+    grid-template-rows: 20vw 15vw 27vw;
+
+    padding-top: 3vw;
+    height: 66vw;
   
     .img_1 {
       @include image("../../assets/images/home/img_1.png", 50% 60%, 150%);
-      @include dimensions(350px, 300px);
+      @include dimensions(23vw, 20vw);
     }
     
     .img_2 {
-      @include image("../../assets/images/home/img_2.png", 25% 20%, 150%);
-      @include dimensions(350px, 250px);
+      @include image("../../assets/images/home/img_2.png", 25% 20%, 140%);
+      @include dimensions(23vw, 15vw);
     }
     
     .img_3 {
       @include image("../../assets/images/home/img_3.png", 25%, 140%);
-      @include dimensions(350px, 450px);
+      @include dimensions(23vw, 27vw);
     }
   }
   
   .column_2 {
     display: grid;
+    gap: 2vw;
+    grid-template-rows: 15vw 23vw 15vw 21vw;
+
     align-items: start;
-    height: 1300px;
+    justify-items: center;
+    height: 80vw;
   
     .img_4 {
       @include image("../../assets/images/home/img_4.png", center, 100%);
-      @include dimensions(350px, 250px);
+      @include dimensions(23vw, 15vw);
     }
     
     .img_5 {
       @include image("../../assets/images/home/img_5.png", center, 100%);
-      @include dimensions(350px, 350px);
+      @include dimensions(23vw, 23vw);
     }
     
     .img_6 {
       @include image("../../assets/images/home/img_6.png", center, 130%);
-      @include dimensions(350px, 250px);
+      @include dimensions(23vw, 15vw);
     }
     
     .img_7 {
       @include image("../../assets/images/home/img_7.png", center, 150%);
-      @include dimensions(350px, 350px);
+      @include dimensions(23vw, 21vw);
     }
   }
   
   .column_3 {
     display: grid;
+    gap: 2vw;
+    grid-template-rows: 25vw 15vw 22vw;
     align-items: end;
-    height: 1100px;
+    justify-items: end;
+
+    padding-top: 3vw;
+    height: 60vw;
+
   
     .img_8 {
       @include image("../../assets/images/home/img_8.png", center, 150%);
-      @include dimensions(350px, 350px);
+      @include dimensions(23vw, 25vw);
     }
     
     .img_9 {
       @include image("../../assets/images/home/img_9.png", center, 100%);
-      @include dimensions(350px, 230px);
+      @include dimensions(23vw, 15vw);
     }
     
     .img_10 {
       @include image("../../assets/images/home/img_10.png", center, cover);
-      @include dimensions(350px, 350px);
+      @include dimensions(23vw, 22vw);
     }
   }
 }

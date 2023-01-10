@@ -24,135 +24,153 @@
 }
 
 .blog {
-  @include dimensions(100%, 1900px);
+  @include dimensions(100vw, 140vw);
 }
 
 .news_about_lian {
-  width: 560px;
+  width: 35vw;
 }
 
 .latest_news {
-  width: 350px;
+  width: 22vw;
 }
 
 .img_1 {
-  @include image("../../assets/images/blog/img_1.png", 70% 45%, 90%);
-  @include dimensions(100%, 300px);
+  @include image("../../assets/images/blog/img_1.png", 10% 45%, 110%);
+  @include dimensions(100vw, 22vw);
 }
 
 .columns {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2vw;
 
-  @include dimensions(70%, 650px);
-  @include possitionTopLeft(relative, 80px, 50%);
+  @include dimensions(75vw, 90vw);
+  @include possitionTopLeft(relative, 5vw, 52.5vw);
   transform: translate(-50%);
 
   p {
-    margin-top: 0px;
-    margin-left: 20px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-left: 2.5vw;
+    margin-bottom: 0;
   }
 
   input {
-    @include dimensions(70%, 25px);
+    @include dimensions(100%, 2vw);
   }
 
   .column_1 {
     display: grid;
+    gap: 1vw;
 
     button {
       background-color: black;
-      @include font("Roboto-Bold", white, 16px, uppercase, center);
-      @include dimensions(150px, 30px);
-      border-radius: 3px;
+      @include font("Roboto-Bold", white, 1vw, uppercase, center);
+      @include dimensions(8vw, 2vw);
+      border-radius: 0.5vw;
+      margin-left: 2.5vw;
     }
 
     .img_2 {
       @include image("../../assets/images/blog/img_2.png", 50%, 170%);
-      @include dimensions(350px, 300px);
+      @include dimensions(23vw, 22vw);
     }
 
     .img_3 {
       @include image("../../assets/images/blog/img_3.png", 60% 40%, 200%);
-      @include dimensions(350px, 300px);
+      @include dimensions(23vw, 22vw);
     }
   }
 
   .column_2 {
     display: grid;
-    gap: 30px;
+    gap: 1vw;
 
     .img_4 {
-      @include image("../../assets/images/blog/img_4.png", center, cover);
-      @include dimensions(350px, 250px);
+      @include image("../../assets/images/blog/img_4.png", 60%, 170%);
+      @include dimensions(23vw, 17vw);
     }
 
     .img_5 {
       @include image("../../assets/images/blog/img_5.png", 60%, 150%);
-      @include dimensions(350px, 250px);
+      @include dimensions(23vw, 17vw);
     }
 
     .img_6 {
       @include image("../../assets/images/blog/img_6.png", 20% 80%, 190%);
-      @include dimensions(350px, 250px);
+      @include dimensions(23vw, 17vw);
     }
   }
 
   .column_3 {
     display: grid;
-    gap: 30px;
+    gap: 1vw;
+    grid-template-rows: 4vw 25vw 17vw;
+    @include dimensions(23vw, 75vw);
 
     .title {
       background-color: #eeeeee;
-      @include dimensions(100%, 40px);
+      @include dimensions(23vw, 3vw);
 
       .title_text {
-        position: relative;
-        top: 50%;
-        transform: translate(0, -50%);
+        @include possitionTopLeft(relative, -0.7vw, 0);
       }
     }
 
+    .title:before {
+      border: 1vw solid transparent;
+      border-top-color: #eeeeee;
+      @include possitionTopLeft(relative, 3.7vw, 10.75vw);
+      content: '';
+  }
+
     .search {
       border: none;
+      @include dimensions(23vw, 4vw);
     }
 
     .recent_posts_block {
+      display: grid;
+      @include dimensions(23vw, 25vw);
 
       .post_block {
         display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 45% 25%;
         grid-template-areas:
-          'img bold_text'
-          'img data';
+          'img post_title'
+          'img post_data';
 
-        @include possitionTopLeft(relative, 30px, 0);
-        @include dimensions(100%, 100px);
+        @include possitionTopLeft(relative, 0, 2vw);
+        @include dimensions(19vw, 4.5vw);
+
+        .post_title {
+          height: 3vw;
+          @include font("Roboto-Bold", #4d4d4d, 01vw, none, left);
+        }
 
         .img_1_1 {
           grid-area: img;
           @include image("../../assets/images/blog/img_1_1.png", 35%, 150%);
-          @include dimensions(100px, 80px);
-          background-color: red;
+          @include dimensions(6vw, 4.5vw);
         }
 
         .img_1_2 {
           grid-area: img;
           @include image("../../assets/images/blog/img_1_2.png", 68% 57%, 500%);
-          @include dimensions(100px, 80px);
+          @include dimensions(6vw, 4.5vw);
         }
 
         .img_1_3 {
           grid-area: img;
           @include image("../../assets/images/blog/img_1_3.png", 15% 40%, 150%);
-          @include dimensions(100px, 80px);
+          @include dimensions(6vw, 4.5vw);
         }
 
         .img_1_4 {
           grid-area: img;
           @include image("../../assets/images/blog/img_1_4.png", 5% 15%, 140%);
-          @include dimensions(100px, 80px);
+          @include dimensions(6vw, 4.5vw);
         }
       }
     }
@@ -161,19 +179,20 @@
       .tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 0.5vw;
         align-content: center;
-
-        @include dimensions(100%, 180px);
+        @include possitionTopLeft(relative, 0, 11.5vw);
+        transform: translate(-50%);
+        @include dimensions(90%, 15vw);
 
         .tag {
-          padding: 5px 15px;
+          padding: 0.5vw 0.5vw;
           justify-items: center;
-          line-height: 1.3;
+          line-height: 1.1;
 
-          border: solid 1px #dadada;
-          border-radius: 3px;
-          @include dimensions(null, 20px);
+          border: solid 0.1vw #dadada;
+          border-radius: 0.3vw;
+          @include dimensions(null, 1vw);
         }
 
         .tag:hover {
@@ -185,66 +204,60 @@
 
     .instagram_block {
       .images {
-        display: grid;
-        gap: 5px;
-        grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 30% 30% 30%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 0.5vw;
 
-        @include possitionTopLeft(relative, 20px, 50%);
+        @include possitionTopLeft(relative, 1vw, 11.5vw);
         transform: translate(-50%);
-        @include dimensions(90%, 280px);
+        @include dimensions(90%, 17vw);
 
         .img_2_1 {
           @include image("../../assets/images/blog/img_2_1.png", 10%, none);
-          @include dimensions(100px, 80px);
+          @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_2 {
           @include image("../../assets/images/blog/img_2_2.png", 60%, none);
-          @include dimensions(100px, 80px);
+          @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_3 {
           @include image("../../assets/images/blog/img_2_3.png", 65% 60%, none);
-          @include dimensions(100px, 80px);
+          @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_4 {
           @include image("../../assets/images/blog/img_2_4.png", 50%, none);
-          @include dimensions(100px, 80px);
+          @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_5 {
           @include image("../../assets/images/blog/img_2_5.png", 0 70%, none);
-          @include dimensions(100px, 80px);
+          @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_6 {
           @include image("../../assets/images/blog/img_2_6.png", 5% 30%, none);
-          @include dimensions(100px, 80px);
+          @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_7 {
           @include image("../../assets/images/blog/img_2_7.png", 50% 10%, none);
-          @include dimensions(100px, 80px);
+          @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_8 {
           @include image("../../assets/images/blog/img_2_8.png", 90% 50%, none);
-          @include dimensions(100px, 80px);
+          @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_9 {
           @include image("../../assets/images/blog/img_2_9.png", 40% 90%, none);
-          @include dimensions(100px, 80px);
+          @include dimensions(6.5vw, 5vw);
         }
       }
     }
-
-    // .img_5 {
-    //   @include image("../../assets/images/about/img_5.png", 20% 15%, 130%);
-    //   @include dimensions(350px, 450px);
-    //   background-color: #efefef;
-    // }
   }
 }

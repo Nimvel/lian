@@ -1,0 +1,125 @@
+@mixin dimensions($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin possitionTopLeft($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
+@mixin image($url, $position, $size) {
+  background: url($url) no-repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin font($family, $color, $size, $transform, $align) {
+  font-family: $family;
+  color: $color;
+  font-size: $size;
+  text-transform: $transform;
+  text-align: $align;
+}
+
+.portfolio {
+  @include dimensions(100%, 1600px);
+
+  .header {
+    background-color: #dfdfdf;
+    height: 350px;
+
+    .latest_projects {
+      width: 480px;
+    }
+    
+    .we_deliver_quality {
+      width: 300px;
+    }
+    
+    .img_1 {
+      @include image("../../assets/images/portfolio/img_1.png", 0 0 , 70%);
+      @include dimensions(750px, 400px);
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  gap: 100px;
+  @include possitionTopLeft(relative, 0, 50%);
+  transform: translate(-50%);
+  @include dimensions(70%, 100px);
+}
+
+.info {
+  display: grid;
+  gap: 5%;
+  grid-template-columns: 50% 45%;
+  @include possitionTopLeft(relative, 0, 50%);
+  transform: translate(-50%);
+  @include dimensions(70%, 500px);
+
+  .column_1 {
+    p {
+      text-align: left;
+    }
+
+    .icons {
+
+    }
+  }
+
+  .column_2 {
+    display: grid;
+
+    grid-template-areas: 
+    'big big big big'
+    'small small small small';
+
+    .img_2 {
+      grid-area: big;
+      @include image("../../assets/images/portfolio/img_2.png", center, cover);
+      // @include possitionTopLeft(relative, 80px, 0);
+      @include dimensions(100%, 300px);
+    }
+
+    .img_3 {
+      @include image("../../assets/images/portfolio/img_3.png", center, cover);
+      // @include possitionTopLeft(relative, 80px, 0);
+      @include dimensions(100px, 100px);
+    }
+
+    .img_4 {
+      @include image("../../assets/images/portfolio/img_4.png", center, cover);
+      // @include possitionTopLeft(relative, 80px, 0);
+      @include dimensions(100px, 100px);
+    }
+
+    .img_5 {
+      @include image("../../assets/images/portfolio/img_5.png", center, cover);
+      // @include possitionTopLeft(relative, 80px, 0);
+      @include dimensions(100px, 100px);
+    }
+  }
+}
+
+.columns {
+  height: 450px;
+
+  .img_6 {
+    @include image("../../assets/images/portfolio/img_6.png", center, cover);
+    @include dimensions(350px, 250px);
+  }
+  
+  .img_7 {
+    @include image("../../assets/images/portfolio/img_7.png", center, cover);
+    @include dimensions(350px, 250px);
+  }
+  
+  .img_8 {
+    @include image("../../assets/images/portfolio/img_8.png", center, cover);
+    @include dimensions(350px, 250px);
+  }
+}

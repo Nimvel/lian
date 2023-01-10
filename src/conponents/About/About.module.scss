@@ -24,19 +24,19 @@
 }
 
 .about {
-  @include dimensions(100%, 1900px);
+  @include dimensions(100vw, 135vw);
 
   .about_the_agency {
-    width: 560px;
+    width: 35vw;
   }
   
   .welcome_to_lian {
-    width: 260px;
+    width: 16vw;
   }
   
   .img_1 {
-    @include image("../../assets/images/about/img_1.png", 100% 30%, 110%);
-    @include dimensions(900px, 400px);
+    @include image("../../assets/images/about/img_1.png", 100% 35%, 90%);
+    @include dimensions(60vw, 22vw);
   }
 }
 
@@ -44,28 +44,32 @@
   display: grid;
   grid-template-columns: 50% 50%;
 
-  @include dimensions(70%, 500px);
-  @include possitionTopLeft(relative, 70px, 50%);
+  @include dimensions(70vw, 40vw);
+  @include possitionTopLeft(relative, 5vw, 50%);
   transform: translate(-50%);
 
   .img_2 {
-    @include image("../../assets/images/about/img_2.png", 80%, 150%);
-    @include dimensions(500px, 500px);
+    @include image("../../assets/images/about/img_2.png", 80%, 170%);
+    @include dimensions(33vw, 35vw);
   }
 
   .skill_value_block {
-    @include font("Lato-Light", white, 16px, uppercase, center);
-    @include dimensions(40px, 22px);
+    @include font("Lato-Light", white, 0.8vw, uppercase, center);
+    @include dimensions(2.5vw, 1.4vw);
+    line-height: 1.5;
     background-color: black;
-    border-radius: 2px;
+    border-radius: 0.2vw;
+    @include possitionTopLeft(relative, -3.5vw, null);
+
   }
 
   .skill_value_block:before {
-    border: 10px solid transparent;
+    border: 0.6vw solid transparent;
     border-left-color: black;
-    @include possitionTopLeft(absolute, 10px, 0);
+    @include possitionTopLeft(absolute, 0.7vw, 0);
     content: '';
   }
+
 
   .photoshop_line {
     width: 90%
@@ -76,8 +80,9 @@
   }
 
   .photoshop_skill {
-    @include possitionTopLeft(relative, -50px, 91%);
+    left: 91%;
   }
+
 
   .branding_line {
     width: 95%
@@ -88,8 +93,9 @@
   }
 
   .branding_skill {
-    @include possitionTopLeft(relative, -50px, 96%);
+    left: 96%;
   }
+
 
   .photography_line {
     width: 50%
@@ -100,8 +106,9 @@
   }
 
   .photography_skill {
-    @include possitionTopLeft(relative, -50px, 51%);
+    left: 51%;
   }
+
 
   .design_line {
     width: 85%
@@ -112,30 +119,38 @@
   }
 
   .design_skill {
-    @include possitionTopLeft(relative, -50px, 86%);
+    left: 86%;
   }
 }
 
 .columns {
-   p {
-    margin-left: 20px;
+  height: 45vw;
+
+  p {
+    margin-left: 2vw;
+    margin-bottom: 0vw;
+  }
+
+  span {
+    margin-left: 2vw;
+    @include font("Roboto-Bold", #a3a3a3, 1vw, none, left);
   }
 
   .img_3 {
-    @include image("../../assets/images/about/img_3.png", 50% 100%, 78%);
-    @include dimensions(350px, 450px);
+    @include image("../../assets/images/about/img_3.png", 50% 100%, 80%);
+    @include dimensions(22vw, 30vw);
     background-color: #efefef;
   }
   
   .img_4 {
-    @include image("../../assets/images/about/img_4.png", center, 70%);
-    @include dimensions(350px, 450px);
+    @include image("../../assets/images/about/img_4.png", 50% 100%, 72%);
+    @include dimensions(22vw, 30vw);
     background-color: #efefef;
   }
   
   .img_5 {
-    @include image("../../assets/images/about/img_5.png", 20% 15%, 130%);
-    @include dimensions(350px, 450px);
+    @include image("../../assets/images/about/img_5.png", 20% 5%, 140%);
+    @include dimensions(22vw, 30vw);
     background-color: #efefef;
   }
 }

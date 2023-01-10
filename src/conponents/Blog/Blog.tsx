@@ -1,4 +1,3 @@
-import { type } from 'os'
 import { FC } from 'react'
 import s from './Blog.module.scss'
 
@@ -9,8 +8,7 @@ type BlogPostProps = {
 const BlogPost: FC<BlogPostProps> = ({ withImage }) => {
     return (
         <div>
-
-            <p className='bold_text'>
+            <p className='title'>
                 {withImage ? 'I am a Blog Post with an Awesome Image' : 'I am a Blog Post Title'}
             </p>
             <p className='?'>
@@ -41,7 +39,6 @@ const Blog = () => {
                 <div className={`background ${s.img_1}`}></div>
             </div>
 
-
             <div className={s.columns}>
                 <div className={s.column_1}>
                     <button>wordpress</button>
@@ -66,22 +63,22 @@ const Blog = () => {
                         </div>
                         <div className={s.post_block}>
                             <div className={s.img_1_1}></div>
-                            <p className='bold_text'>Lorem ipsum dolor sit amet, consec</p>
+                            <p className={s.post_title}>Lorem ipsum dolor sit amet, consec</p>
                             <p className='plain_text'>July 5, 2016</p>
                         </div>
                         <div className={s.post_block}>
                             <div className={s.img_1_2}></div>
-                            <p className='bold_text'>Ut wisi enim ad minim veniam, quis</p>
+                            <p className={s.post_title}>Ut wisi enim ad minim veniam, quis</p>
                             <p className='plain_text'>July 17, 2016</p>
                         </div>
                         <div className={s.post_block}>
                             <div className={s.img_1_3}></div>
-                            <p className='bold_text'>Aliquip ex ea commodo aliquam erat volutpat</p>
+                            <p className={s.post_title}>Aliquip ex ea commodo aliquam erat volutpat</p>
                             <p className='plain_text'>July 21, 2016</p>
                         </div>
                         <div className={s.post_block}>
                             <div className={s.img_1_4}></div>
-                            <p className='bold_text'>Ut wisi enim ad minim veniam, quis</p>
+                            <p className={s.post_title}>Ut wisi enim ad minim veniam, quis</p>
                             <p className='plain_text'>July 17, 2016</p>
                         </div>
                     </div>
@@ -91,34 +88,35 @@ const Blog = () => {
                             <div className={`middle_text ${s.title_text}`}>popular tags</div>
                         </div>
                         <div className={s.tags}>
-                            <div className={`plain_text ${s.tag}`}>construction</div>
-                            <div className={`plain_text ${s.tag}`}>engineering</div>
-                            <div className={`plain_text ${s.tag}`}>architecture</div>
-                            <div className={`plain_text ${s.tag}`}>structural design</div>
-                            <div className={`plain_text ${s.tag}`}>civil engineer</div>
-                            <div className={`plain_text ${s.tag}`}>industrial</div>
-                            <div className={`plain_text ${s.tag}`}>management</div>
-                            <div className={`plain_text ${s.tag}`}>mechanical</div>
-                        </div>
+                            <span className={`plain_text ${s.tag}`}>construction</span>
+                            <span className={`plain_text ${s.tag}`}>engineering</span>
+                            <span className={`plain_text ${s.tag}`}>architecture</span>
+                            <span className={`plain_text ${s.tag}`}>structural design</span>
+                            <span className={`plain_text ${s.tag}`}>civil engineer</span>
+                            <span className={`plain_text ${s.tag}`}>industrial</span>
+                            <span className={`plain_text ${s.tag}`}>management</span>
+                            <span className={`plain_text ${s.tag}`}>mechanical</span>
 
-                        <div className={s.instagram_block}>
-                            <div className={s.title}>
-                                <div className={`middle_text ${s.title_text}`}>instagram</div>
-                            </div>
-                            <div className={s.images}>
-                                <div className={s.img_2_1} />
-                                <div className={s.img_2_2} />
-                                <div className={s.img_2_3} />
-                                <div className={s.img_2_4} />
-                                <div className={s.img_2_5} />
-                                <div className={s.img_2_6} />
-                                <div className={s.img_2_7} />
-                                <div className={s.img_2_8} />
-                                <div className={s.img_2_9} />
-                            </div>
                         </div>
-
                     </div>
+
+                    <div className={s.instagram_block}>
+                        <div className={s.title}>
+                            <div className={`middle_text ${s.title_text}`}>instagram</div>
+                        </div>
+                        <div className={s.images}>
+                            <div className={s.img_2_1} />
+                            <div className={s.img_2_2} />
+                            <div className={s.img_2_3} />
+                            <div className={s.img_2_4} />
+                            <div className={s.img_2_5} />
+                            <div className={s.img_2_6} />
+                            <div className={s.img_2_7} />
+                            <div className={s.img_2_8} />
+                            <div className={s.img_2_9} />
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
