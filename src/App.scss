@@ -164,7 +164,8 @@
 .central_text_block {
   @include possitionTopLeft(relative, 5vw, 50%);
   transform: translate(-50%);
-  @include dimensions(43vw, 15vw);
+  width: 43vw;
+  margin-bottom: 3vw;
 
   .large_text {
     @include font("Lato-Regular", black, 2vw, uppercase, center);

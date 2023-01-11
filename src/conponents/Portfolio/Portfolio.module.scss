@@ -24,7 +24,7 @@
 }
 
 .portfolio {
-  @include dimensions(100vw, 120vw);
+  @include dimensions(100vw, 100vw);
 
   .header {
     background-color: #e3e2e2;
@@ -112,59 +112,59 @@
     }
 
     .img_1_1 {
-      @include image("../../assets/images/portfolio/img_2.png", center, cover);
+      @include image("../../assets/images/portfolio/img_2_1.png", center, cover);
       @include dimensions(31.5vw, 23vw);
     }
     .img_1_2 {
-      @include image("../../assets/images/portfolio/img_3.png", center, cover);
+      @include image("../../assets/images/portfolio/img_2_2.png", center, cover);
       @include dimensions(31.5vw, 23vw);
     }
     .img_1_3 {
-      @include image("../../assets/images/portfolio/img_4.png", center, cover);
+      @include image("../../assets/images/portfolio/img_2_3.png", center, cover);
       @include dimensions(31.5vw, 23vw);
     }
     .img_1_4 {
-      @include image("../../assets/images/portfolio/img_5.png", center, cover);
+      @include image("../../assets/images/portfolio/img_2_4.png", center, cover);
       @include dimensions(31.5vw, 23vw);
     }
 
+    .img_2_1 {
+      @include image("../../assets/images/portfolio/img_2_1.png", center, cover);
+      @include dimensions(7.5vw, 5vw);
+    }
+
     .img_2_2 {
-      @include image("../../assets/images/portfolio/img_2.png", center, cover);
+      @include image("../../assets/images/portfolio/img_2_2.png", center, cover);
       @include dimensions(7.5vw, 5vw);
     }
 
     .img_2_3 {
-      @include image("../../assets/images/portfolio/img_3.png", center, cover);
+      @include image("../../assets/images/portfolio/img_2_3.png", center, cover);
       @include dimensions(7.5vw, 5vw);
     }
 
     .img_2_4 {
-      @include image("../../assets/images/portfolio/img_4.png", center, cover);
-      @include dimensions(7.5vw, 5vw);
-    }
-
-    .img_2_5 {
-      @include image("../../assets/images/portfolio/img_5.png", center, cover);
+      @include image("../../assets/images/portfolio/img_2_4.png", center, cover);
       @include dimensions(7.5vw, 5vw);
     }
   }
 }
 
 .columns {
-  height: 450px;
+  height: 16vw;
 
-  .img_6 {
-    @include image("../../assets/images/portfolio/img_6.png", center, cover);
+  .img_3 {
+    @include image("../../assets/images/portfolio/img_3.png", center, cover);
     @include dimensions(22vw, 16vw);
   }
   
-  .img_7 {
-    @include image("../../assets/images/portfolio/img_7.png", center, cover);
+  .img_4 {
+    @include image("../../assets/images/portfolio/img_4.png", center, cover);
     @include dimensions(22vw, 16vw);
   }
   
-  .img_8 {
-    @include image("../../assets/images/portfolio/img_8.png", center, cover);
+  .img_5 {
+    @include image("../../assets/images/portfolio/img_5.png", center, cover);
     @include dimensions(22vw, 16vw);
   }
 }

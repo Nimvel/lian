@@ -7,10 +7,10 @@ const Image = () => {
 
     return <div className={s.column_2}>
         <div className={s[`img_1_${image}`]} />
-        <a onMouseEnter={() => setImage(1)}><div className={s.img_2_2} /></a>
-        <a onMouseEnter={() => setImage(2)}><div className={s.img_2_3} /></a>
-        <a onMouseEnter={() => setImage(3)}><div className={s.img_2_4} /></a>
-        <a onMouseEnter={() => setImage(4)}><div className={s.img_2_5} /></a>
+        <a onMouseEnter={() => setImage(1)}><div className={s.img_2_1} /></a>
+        <a onMouseEnter={() => setImage(2)}><div className={s.img_2_2} /></a>
+        <a onMouseEnter={() => setImage(3)}><div className={s.img_2_3} /></a>
+        <a onMouseEnter={() => setImage(4)}><div className={s.img_2_4} /></a>
     </div>
 }
 
@@ -73,14 +73,14 @@ const Portfolio = () => {
 
             <div className={`columns ${s.columns}`}>
                 <div className='column_1'>
-                    <div className={s.img_6}></div>
+                    <div className={s.img_3}></div>
                 </div>
                 <div className='column_2'>
-                    <div className={s.img_7}></div>
+                    <div className={s.img_4}></div>
                 </div>
 
                 <div className='column_3'>
-                    <div className={s.img_8}></div>
+                    <div className={s.img_5}></div>
                 </div>
             </div>
 
