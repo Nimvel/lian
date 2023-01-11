@@ -28,28 +28,28 @@ const About = () => {
                     </p>
                     <div>
                         <div className='middle_text'>our skills</div>
-                        <div className='title'>Photoshop</div>
+                        <div className='bold_text'>Photoshop</div>
                         <div className='skillbar'>
                             <div className={`line ${s.photoshop_line}`} />
                             <div className={`circle ${s.photoshop_circle}`} />
                             <div className={`${s.skill_value_block} ${s.photoshop_skill}`}>90%</div>
                         </div>
 
-                        <div className='title'>Branding</div>
+                        <div className='bold_text'>Branding</div>
                         <div className='skillbar'>
                             <div className={`line ${s.branding_line}`} />
                             <div className={`circle ${s.branding_circle}`} />
                             <div className={`${s.skill_value_block} ${s.branding_skill}`}>95%</div>
                         </div>
 
-                        <div className='title'>Photography</div>
+                        <div className='bold_text'>Photography</div>
                         <div className='skillbar'>
                             <div className={`line ${s.photography_line}`} />
                             <div className={`circle ${s.photography_circle}`} />
                             <div className={`${s.skill_value_block} ${s.photography_skill}`}>50%</div>
                         </div>
 
-                        <div className='title'>Web Design</div>
+                        <div className='bold_text'>Web Design</div>
                         <div className='skillbar'>
                             <div className={`line ${s.design_line}`} />
                             <div className={`circle ${s.design_circle}`} />

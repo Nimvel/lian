@@ -13,7 +13,12 @@ import Portfolio from './conponents/Portfolio/Portfolio';
 function App() {
   return (
     <div className='App'>
+      <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet" />
+      <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet" />
+      <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet" />
+
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      
       <Header />
       <div className='content'>
         <Routes>

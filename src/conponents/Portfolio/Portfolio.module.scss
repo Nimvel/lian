@@ -46,61 +46,106 @@
 }
 
 .navbar {
-  display: flex;
-  gap: 100px;
+  gap: 10vw;
+
   @include possitionTopLeft(relative, 0, 50%);
   transform: translate(-50%);
-  @include dimensions(70%, 100px);
+
+  @include dimensions(70vw, 4vw);
+  align-items: center;
+
+  .show_all {
+    margin-left: 35vw;
+  }
 }
 
 .info {
   display: grid;
-  gap: 5%;
-  grid-template-columns: 50% 45%;
-  @include possitionTopLeft(relative, 0, 50%);
+  gap: 2vw;
+  grid-template-columns: 50% 50%;
+
+  @include possitionTopLeft(relative, 4vw, 50%);
   transform: translate(-50%);
-  @include dimensions(70%, 500px);
+  @include dimensions(70vw, 35vw);
 
   .column_1 {
     p {
       text-align: left;
     }
 
-    .icons {
-
+    .large_text {
+      @include font("Lato-Regular", black, 1.5vw, uppercase, left);
+      letter-spacing: 0.5vw;
     }
+
+    // .icons {
+
+    // }
   }
 
   .column_2 {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+    @include dimensions(31.5vw, 29vw);
 
-    grid-template-areas: 
-    'big big big big'
-    'small small small small';
+    a { 
+      display: block; 
+      position: relative; 
+      cursor: pointer;
+    }
+    
+    a:after { 
+      content: ''; 
+      @include possitionTopLeft(absolute, 0, 0);
+      right: 0; 
+      bottom: 0; 
+    
+      width: 7.5vw;
+    
+      background: rgba(0, 0, 0, 0.5);  
+      opacity: 0; 
+    }
+    
+    a:hover:after { 
+      opacity: 1;
+    }
 
-    .img_2 {
-      grid-area: big;
+    .img_1_1 {
       @include image("../../assets/images/portfolio/img_2.png", center, cover);
-      // @include possitionTopLeft(relative, 80px, 0);
-      @include dimensions(100%, 300px);
+      @include dimensions(31.5vw, 23vw);
     }
-
-    .img_3 {
+    .img_1_2 {
       @include image("../../assets/images/portfolio/img_3.png", center, cover);
-      // @include possitionTopLeft(relative, 80px, 0);
-      @include dimensions(100px, 100px);
+      @include dimensions(31.5vw, 23vw);
     }
-
-    .img_4 {
+    .img_1_3 {
       @include image("../../assets/images/portfolio/img_4.png", center, cover);
-      // @include possitionTopLeft(relative, 80px, 0);
-      @include dimensions(100px, 100px);
+      @include dimensions(31.5vw, 23vw);
+    }
+    .img_1_4 {
+      @include image("../../assets/images/portfolio/img_5.png", center, cover);
+      @include dimensions(31.5vw, 23vw);
     }
 
-    .img_5 {
+    .img_2_2 {
+      @include image("../../assets/images/portfolio/img_2.png", center, cover);
+      @include dimensions(7.5vw, 5vw);
+    }
+
+    .img_2_3 {
+      @include image("../../assets/images/portfolio/img_3.png", center, cover);
+      @include dimensions(7.5vw, 5vw);
+    }
+
+    .img_2_4 {
+      @include image("../../assets/images/portfolio/img_4.png", center, cover);
+      @include dimensions(7.5vw, 5vw);
+    }
+
+    .img_2_5 {
       @include image("../../assets/images/portfolio/img_5.png", center, cover);
-      // @include possitionTopLeft(relative, 80px, 0);
-      @include dimensions(100px, 100px);
+      @include dimensions(7.5vw, 5vw);
     }
   }
 }
@@ -110,16 +155,16 @@
 
   .img_6 {
     @include image("../../assets/images/portfolio/img_6.png", center, cover);
-    @include dimensions(350px, 250px);
+    @include dimensions(22vw, 16vw);
   }
   
   .img_7 {
     @include image("../../assets/images/portfolio/img_7.png", center, cover);
-    @include dimensions(350px, 250px);
+    @include dimensions(22vw, 16vw);
   }
   
   .img_8 {
     @include image("../../assets/images/portfolio/img_8.png", center, cover);
-    @include dimensions(350px, 250px);
+    @include dimensions(22vw, 16vw);
   }
 }

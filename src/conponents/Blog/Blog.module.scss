@@ -30,6 +30,24 @@
     display: block; 
     position: relative; 
     cursor: pointer;
+
+    .post {
+      opacity: 0;
+      z-index: 1;
+      padding: 6.5vw 0.5vw;
+
+      @include possitionTopLeft(absolute, 0, 0);
+      right: 0; 
+      bottom: 0; 
+
+      p, p:hover, span {
+      color: #eeeeee;
+      }
+    }
+
+    .post:hover {
+      opacity: 1;
+    }
   }
   
   a:after { 
@@ -44,7 +62,12 @@
     opacity: 0; 
   }
   
-  a:hover:after { opacity: 1; }
+  a:hover:after { 
+    opacity: 1;
+
+    .post {
+      opacity: 1;
+    }}
 
   button {
     @include possitionTopLeft(relative, 2vw, 25vw);

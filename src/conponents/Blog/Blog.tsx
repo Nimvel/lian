@@ -1,29 +1,32 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FC } from 'react'
 import s from './Blog.module.scss'
 
 type BlogPostProps = {
-    withImage: boolean
+    withImage?: boolean
+    small?: boolean
 }
 
-const BlogPost: FC<BlogPostProps> = ({ withImage }) => {
-    let dimensions = withImage ? 'small' : 'large'
+const BlogPost: FC<BlogPostProps> = ({ withImage, small}) => {
+    let dimensions = withImage || small ? 'small' : 'large'
 
     return (
         <div>
             <p className='title'>
-                {withImage ? 'I am a Blog Post with an Awesome Image' : 'I am a Blog Post Title'}
+                {withImage 
+                ? 'I am a Blog Post with an Awesome Image' 
+                : 'I am a Blog Post Title'}
             </p>
             <span className="material-symbols-outlined">person</span>
             <span className={s.data_text}>by Jenn Pereira</span>
             <p className={`${s.post_text} ${s[dimensions]}`}>
-                {withImage 
-                ? 'Proin semper suscipit magna, nec imperdiet lacus semper vitae. Sed hendrerit enim non justo posuere placerat eget purus mauris...'
-                : 'Phasellus et nisl tellus. Etiam facilisis eu nisi scelerisque faucibus. Proin semper suscipit magna, nec imperdiet lacus semper vitae. Sed hendrerit enim non justo posuere placerat eget purus mauris. Etiam facilisis eu nisi scelerisque faucibus...'}
+                {withImage
+                    ? 'Proin semper suscipit magna, nec imperdiet lacus semper vitae. Sed hendrerit enim non justo posuere placerat eget purus mauris...'
+                    : small
+                    ? 'Phasellus et nisl tellus. Etiam facilisis eu nisi scelerisque faucibus. Proin semper suscipit magna, nec imperdiet lacus semper...'
+                    : 'Phasellus et nisl tellus. Etiam facilisis eu nisi scelerisque faucibus. Proin semper suscipit magna, nec imperdiet lacus semper vitae. Sed hendrerit enim non justo posuere placerat eget purus mauris. Etiam facilisis eu nisi scelerisque faucibus...'}
             </p>
             <span className="material-symbols-outlined">calendar_today</span>
             <span className={s.data_text}>on July 19, 2016</span>
-            {/* <FontAwesomeIcon icon="fa-duotone fa-heart" /> */}
         </div>
     )
 }
@@ -43,13 +46,20 @@ const Blog = () => {
             <div className={s.columns}>
                 <div className={s.column_1}>
                     {/* <button>wordpress</button> */}
-                    <BlogPost withImage={false} />
+                    <BlogPost />
                     <a>
                         <div className={s.img_2} />
-                        {/* <BlogPost withImage={false} /> */}
+                        <div className={s.post}>
+                            <BlogPost small={true} />
+                        </div>
                     </a>
                     <BlogPost withImage={true} />
-                    <a><div className={s.img_3} /></a>
+                    <a>
+                        <div className={s.img_3} />
+                        <div className={s.post}>
+                            <BlogPost small={true} />
+                        </div>
+                    </a>
                 </div>
 
                 <div className={s.column_2}>

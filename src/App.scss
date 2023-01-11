@@ -58,6 +58,10 @@
     line-height: 2;
   }
 
+  .bold_text {
+    @include font("Roboto-Bold", #4d4d4d, 1.4vw, none, left);
+  }
+
   .title {
     @include font("Roboto-Regular", #4d4d4d, 1.4vw, none, left);
   }

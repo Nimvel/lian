@@ -1,4 +1,18 @@
+import { FC, useEffect, useState } from 'react'
 import s from './Portfolio.module.scss'
+
+const Image = () => {
+    const [image, setImage] = useState(1);
+    useEffect(() => { }, [])
+
+    return <div className={s.column_2}>
+        <div className={s[`img_1_${image}`]} />
+        <a onMouseEnter={() => setImage(1)}><div className={s.img_2_2} /></a>
+        <a onMouseEnter={() => setImage(2)}><div className={s.img_2_3} /></a>
+        <a onMouseEnter={() => setImage(3)}><div className={s.img_2_4} /></a>
+        <a onMouseEnter={() => setImage(4)}><div className={s.img_2_5} /></a>
+    </div>
+}
 
 const Portfolio = () => {
     return (
@@ -12,15 +26,15 @@ const Portfolio = () => {
                 <div className={`background ${s.img_1}`}></div>
             </div>
 
-            <div className={s.navbar}>
-                <div className='bold_text'>previous</div>
-                <div className='bold_text'>next</div>
-                <div className='bold_text'>show all</div>
+            <div className={`navbar ${s.navbar}`}>
+                <span>previous</span>
+                <span>next</span>
+                <span className={s.show_all}>show all</span>
             </div>
 
             <div className={s.info}>
                 <div className={s.column_1}>
-                    <p className={`large_text ${s.img_1}`}>Pereira Creative Agency</p>
+                    <p className={s.large_text}>Pereira Creative Agency</p>
                     <p className='plain_text'>Branding Design</p>
                     <p className='plain_text'>February 28, 2015</p>
                     <p className='plain_text'>324 likes</p>
@@ -48,19 +62,13 @@ const Portfolio = () => {
 
                     </div>
                 </div>
-
-                <div className={s.column_2}>
-                    <div className={s.img_2} />
-                    <div className={s.img_3} />
-                    <div className={s.img_4} />
-                    <div className={s.img_5} />
-                </div>
+                <Image />
             </div>
 
             <div className='central_text_block'>
                 <div className='large_text'>Related Works</div>
-                <p className='plain_text central_text'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
-                sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                <p className='plain_text central_text'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
             </div>
 
             <div className={`columns ${s.columns}`}>
