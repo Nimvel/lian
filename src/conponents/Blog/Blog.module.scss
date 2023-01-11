@@ -24,7 +24,49 @@
 }
 
 .blog {
-  @include dimensions(100vw, 140vw);
+  @include dimensions(100vw, 125vw);
+
+  a { 
+    display: block; 
+    position: relative; 
+    cursor: pointer;
+  }
+  
+  a:after { 
+    content: ''; 
+    @include possitionTopLeft(absolute, 0, 0);
+    right: 0; 
+    bottom: 0; 
+  
+    width: 23vw;
+  
+    background: rgba(0, 0, 0, 0.5);  
+    opacity: 0; 
+  }
+  
+  a:hover:after { opacity: 1; }
+
+  button {
+    @include possitionTopLeft(relative, 2vw, 25vw);
+    transform: translate(-50%);
+  }
+
+  .data_text {
+    @include font("FontAwesome", #9a9a9a, 1vw, none, left);
+  }
+
+  .post_text {
+    margin-top: 1vw;
+    @include font("FontAwesome", #5d5d5d, 1vw, none, left);
+  }
+
+  .small {
+    @include dimensions(19vw, 4vw);
+  }
+
+  .large {
+    @include dimensions(18vw, 7.5vw);
+  }
 }
 
 .news_about_lian {
@@ -46,7 +88,7 @@
   gap: 2vw;
 
   @include dimensions(75vw, 90vw);
-  @include possitionTopLeft(relative, 5vw, 52.5vw);
+  @include possitionTopLeft(relative, 5vw, 50vw);
   transform: translate(-50%);
 
   p {
@@ -85,6 +127,10 @@
   .column_2 {
     display: grid;
     gap: 1vw;
+
+    a:after {
+      height: 17vw;
+    }
 
     .img_4 {
       @include image("../../assets/images/blog/img_4.png", 60%, 170%);
@@ -214,42 +260,42 @@
         @include dimensions(90%, 17vw);
 
         .img_2_1 {
-          @include image("../../assets/images/blog/img_2_1.png", 10%, none);
+          @include image("../../assets/images/blog/img_2_1.png", 10%, 160%);
           @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_2 {
-          @include image("../../assets/images/blog/img_2_2.png", 60%, none);
+          @include image("../../assets/images/blog/img_2_2.png", 60%, 160%);
           @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_3 {
-          @include image("../../assets/images/blog/img_2_3.png", 65% 60%, none);
+          @include image("../../assets/images/blog/img_2_3.png", 65% 65%, 250%);
           @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_4 {
-          @include image("../../assets/images/blog/img_2_4.png", 50%, none);
+          @include image("../../assets/images/blog/img_2_4.png", 50% 50%, 200%);
           @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_5 {
-          @include image("../../assets/images/blog/img_2_5.png", 0 70%, none);
+          @include image("../../assets/images/blog/img_2_5.png", 50% 70%, 100%);
           @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_6 {
-          @include image("../../assets/images/blog/img_2_6.png", 5% 30%, none);
+          @include image("../../assets/images/blog/img_2_6.png", 5% 30%, 200%);
           @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_7 {
-          @include image("../../assets/images/blog/img_2_7.png", 50% 10%, none);
+          @include image("../../assets/images/blog/img_2_7.png", 50% 15%, 300%);
           @include dimensions(6.5vw, 5vw);
         }
 
         .img_2_8 {
-          @include image("../../assets/images/blog/img_2_8.png", 90% 50%, none);
+          @include image("../../assets/images/blog/img_2_8.png", 90% 50%, 150%);
           @include dimensions(6.5vw, 5vw);
         }
 

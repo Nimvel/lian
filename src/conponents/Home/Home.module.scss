@@ -29,21 +29,6 @@
   button {
     @include possitionTopLeft(relative, 52vw, 50%);
     transform: translate(-50%);
-
-    @include dimensions(8vw, 2vw);
-
-    @include font("Roboto-Bold", black, 1vw, uppercase, center);
-
-    border: none;
-    background-color: #a4a4a4;
-    border-radius: 0.2vw;
-    color: white;
-
-  }
-
-  button:hover {
-    cursor: pointer;
-    background-color: #bebebe;
   }
 
   .background {

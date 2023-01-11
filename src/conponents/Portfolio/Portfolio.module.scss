@@ -24,23 +24,23 @@
 }
 
 .portfolio {
-  @include dimensions(100%, 1600px);
+  @include dimensions(100vw, 120vw);
 
   .header {
-    background-color: #dfdfdf;
-    height: 350px;
+    background-color: #e3e2e2;
+    height: 22vw;
 
     .latest_projects {
-      width: 480px;
+      width: 32vw;
     }
     
     .we_deliver_quality {
-      width: 300px;
+      width: 18.5vw;
     }
     
     .img_1 {
-      @include image("../../assets/images/portfolio/img_1.png", 0 0 , 70%);
-      @include dimensions(750px, 400px);
+      @include image("../../assets/images/portfolio/img_1.png", -20% 20%, 80%);
+      @include dimensions(40vw, 20vw);
     }
   }
 }

@@ -14,8 +14,9 @@ const Contact = () => {
 
             <div className={s.info}>
                 <div className={s.column_1}>
-                    <div className='middle_text'>office info</div>
+                    <div className={s.large_text}>office info</div>
                     <p className='plain_text'>People Behind the Success of our Company</p>
+                    <p className={s.border} />
                     <p className='plain_text'>
                         <b>Office Hours:</b>   Mon-Friday 8am - 10pm
                     </p>
@@ -29,8 +30,8 @@ const Contact = () => {
                 </div>
 
                 <div className={s.column_2}>
-                    <input className={s.placeholder} placeholder='Name' />
-                    <input className={s.placeholder} placeholder='Email' />
+                    <input placeholder='Name' />
+                    <input placeholder='Email' />
                     <textarea className={s.placeholder} placeholder='Message' />
                     <button>send message</button>
                 </div>
@@ -38,7 +39,7 @@ const Contact = () => {
 
             <div className={s.img_2}>
                 <div className={s.box}>
-                    <p className='middle_text'>Mulitix Big Wordpress Theme</p>
+                    <p className={s.middle_text}>Mulitix Big Wordpress Theme</p>
                     <p className='plain_text'>110-00 Rockaway Blvd <br />
                         South Ozone Park, NY 11420</p>
                 </div>

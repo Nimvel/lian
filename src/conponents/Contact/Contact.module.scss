@@ -24,108 +24,138 @@
 }
 
 .contact {
-  @include dimensions(100%, 1900px);
+  @include dimensions(100vw, 120vw);
 
   .get_in_touch {
-    width: 420px;
+    width: 27vw;
   }
   
   .contact_us_today {
-    width: 270px;
+    width: 17vw;
   }
   
   .img_1 {
-    @include image("../../assets/images/about/img_1.png", 100% 30%, 110%);
-    @include dimensions(900px, 400px);
+    @include image("../../assets/images/about/img_1.png", 100% 35%, 90%);
+    @include dimensions(60vw, 22vw);
   }
 }
 
 .info {
   display: grid;
-  grid-template-columns: 40% 60%;
-  @include possitionTopLeft(relative, 0, 50%);
+  grid-template-columns: 30% 70%;
+
+  @include possitionTopLeft(relative, 3vw, 50%);
   transform: translate(-50%);
-  @include dimensions(70%, 250px);
+  @include dimensions(70vw, 25vw);
 
   .column_1 {
     p {
       color: #2e2e2e;
     }
+
+    .large_text {
+      @include font("Lato-Regular", black, 1.5vw, uppercase, left);
+      letter-spacing: 0.5vw;
+    }
+
+    .border {
+      border-bottom: solid 0.1vw black;
+      width: 5vw;
+      margin-bottom: 2.5vw;
+    }
   }
 
   .column_2 {
-    display: grid;
-    grid-template-areas: 
-    'name email'
-    'message message'
-    'send_message null';
-
-    box-sizing: border-box;
-
-    .placeholder {
-      @include font("Lato-Regular", black, 14px, none, left);
-      font-style: italic;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vw;
+    @include dimensions(100%, 15vw);
 
     textarea {
-      grid-area: message;
-      padding: 5px 10px;
-      @include dimensions(100%, 200px);
+      padding: 0.3vw 0.7vw;
+      @include dimensions(97%, 10vw);
     }
 
     input {
-      padding: 0 10px;
-      width: 100%;
-      height: 20px;
+      padding: 0 0.7vw;
+      @include dimensions(45%, 3vw);
+    }
+
+    textarea, input {
+      font-style: italic;
+      border: solid 0.1vw #c8c8c8;
+      border-radius: 0.3vw;
+    }
+
+    textarea::placeholder, input::placeholder {
+      font-style: italic;
+      @include font("Lato-Regular", #c8c8c8, 14px, none, left);
+    }
+
+    textarea:focus, input:focus {
+      outline: none;
+      border-left: solid 0.3vw #bdbdbd;
     }
 
     button {
       background-color: black;
-      @include font("Roboto-Bold", white, 16px, uppercase, center);
-      @include dimensions(150px, 30px);
-      border-radius: 3px;
+      @include font("Lato-Regular", white, 1vw, uppercase, center);
+      letter-spacing: 0.1vw;
+      @include dimensions(15vw, 2.5vw);
+      border-radius: 0.3vw;
     }
   }
 }
 
 .img_2 {
-    @include image("../../assets/images/contact/img_2.png", center, cover);
-    @include possitionTopLeft(relative, 80px, 0);
-    @include dimensions(100%, 400px);
-    filter: grayscale(100);
+    @include image("../../assets/images/contact/img_2.png", 0 30%, cover);
+    @include possitionTopLeft(relative, 3vw, 0);
+    @include dimensions(100vw, 20vw);
+    margin-bottom: 3vw;
+    filter: grayscale(1);
 
     .box {
       background-color: white;
       @include possitionTopLeft(relative, 50%, 50%);
       transform: translate(-50%, -50%);
-      @include dimensions(300px, 150px);
+      @include dimensions(20vw, 7vw);
       padding: 10px;
+
+      .middle_text {
+        @include font("Lato-Light", black, 1vw, uppercase, center);
+        letter-spacing: 0.1vw;
+        margin-top: 0.5vw;
+        margin-bottom: 1vw;
+      }
 
       p {
         text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
       }
     }
 }
 
 .columns {
-  height: 450px;
+  height: 30vw;
 
   .title {
-    font-size: 18px;
+    font-size: 1.5vw;
+    letter-spacing: 0.3vw;
   }
 
   .img_3 {
     @include image("../../assets/images/contact/img_3.png", center, cover);
-    @include dimensions(350px, 250px);
+    @include dimensions(22vw, 15vw);
   }
   
   .img_4 {
     @include image("../../assets/images/contact/img_4.png", center, cover);
-    @include dimensions(350px, 250px);
+    @include dimensions(22vw, 15vw);
   }
   
   .img_5 {
     @include image("../../assets/images/contact/img_5.png", center, cover);
-    @include dimensions(350px, 250px);
+    @include dimensions(22vw, 15vw);
   }
 }

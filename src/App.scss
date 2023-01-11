@@ -31,6 +31,24 @@
     margin-bottom: 1vw;
   }
 
+  button {
+
+    @include dimensions(8vw, 2vw);
+
+    @include font("Roboto-Bold", black, 1vw, uppercase, center);
+
+    border: none;
+    background-color: #a4a4a4;
+    border-radius: 0.2vw;
+    color: white;
+
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #bebebe;
+  }
+
   .name {
     @include font("Lato-Light", black, 1.7vw, uppercase, left);
   }
@@ -41,7 +59,13 @@
   }
 
   .title {
-    @include font("Roboto-Bold", #4d4d4d, 1.5vw, none, left);}
+    @include font("Roboto-Regular", #4d4d4d, 1.4vw, none, left);
+  }
+
+  .title:hover {
+    cursor: pointer;
+    @include font("Roboto-Bold", #4d4d4d, 1.4vw, none, left);
+  }
 }
 
 .content {
@@ -140,7 +164,7 @@
 
   .large_text {
     @include font("Lato-Regular", black, 2vw, uppercase, center);
-    letter-spacing: 7px;
+    letter-spacing: 0.7vw;
   }
 
   .central_text {
@@ -161,8 +185,10 @@
 }
 
 .material-symbols-outlined {
-  @include possitionTopLeft(relative, 5px, null);
-  color: #aeaeae;
+  @include possitionTopLeft(relative, 0.5vw, 0);
+  margin-left: 2vw;
+
+  color: #9a9a9a;
   font-variation-settings:
   'FILL' 1,
   'wght' 0,
