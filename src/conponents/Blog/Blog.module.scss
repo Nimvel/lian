@@ -24,7 +24,7 @@
 }
 
 .blog {
-  @include dimensions(100vw, 125vw);
+  @include dimensions(100vw, 135vw);
 
   a { 
     display: block; 
@@ -75,6 +75,7 @@
   }
 
   .data_text {
+    margin-left: 2.5vw;
     @include font("FontAwesome", #9a9a9a, 1vw, none, left);
   }
 

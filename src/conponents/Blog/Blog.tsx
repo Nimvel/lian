@@ -16,7 +16,7 @@ const BlogPost: FC<BlogPostProps> = ({ withImage, small}) => {
                 ? 'I am a Blog Post with an Awesome Image' 
                 : 'I am a Blog Post Title'}
             </p>
-            <span className="material-symbols-outlined">person</span>
+            {/* <span className="material-symbols-outlined">person</span> */}
             <span className={s.data_text}>by Jenn Pereira</span>
             <p className={`${s.post_text} ${s[dimensions]}`}>
                 {withImage
@@ -25,7 +25,7 @@ const BlogPost: FC<BlogPostProps> = ({ withImage, small}) => {
                     ? 'Phasellus et nisl tellus. Etiam facilisis eu nisi scelerisque faucibus. Proin semper suscipit magna, nec imperdiet lacus semper...'
                     : 'Phasellus et nisl tellus. Etiam facilisis eu nisi scelerisque faucibus. Proin semper suscipit magna, nec imperdiet lacus semper vitae. Sed hendrerit enim non justo posuere placerat eget purus mauris. Etiam facilisis eu nisi scelerisque faucibus...'}
             </p>
-            <span className="material-symbols-outlined">calendar_today</span>
+            {/* <span className="material-symbols-outlined">calendar_today</span> */}
             <span className={s.data_text}>on July 19, 2016</span>
         </div>
     )
