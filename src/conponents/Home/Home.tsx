@@ -23,7 +23,6 @@ const Home = () => {
                 </div>
             </div>
 
-
             <div className={s.images}>
 
                 <div className={s.column_1}>

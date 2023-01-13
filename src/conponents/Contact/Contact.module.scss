@@ -73,12 +73,12 @@
 
     textarea {
       padding: 0.3vw 0.7vw;
-      @include dimensions(97%, 10vw);
+      @include dimensions(46vw, 10vw);
     }
 
     input {
       padding: 0 0.7vw;
-      @include dimensions(45%, 3vw);
+      @include dimensions(21.5vw, 3vw);
     }
 
     textarea, input {
@@ -89,7 +89,7 @@
 
     textarea::placeholder, input::placeholder {
       font-style: italic;
-      @include font("Lato-Regular", #c8c8c8, 14px, none, left);
+      @include font("Lato-Regular", #c8c8c8, 1.5vw, none, left);
     }
 
     textarea:focus, input:focus {
@@ -119,7 +119,7 @@
       @include possitionTopLeft(relative, 50%, 50%);
       transform: translate(-50%, -50%);
       @include dimensions(20vw, 7vw);
-      padding: 10px;
+      padding: 2vw;
 
       .middle_text {
         @include font("Lato-Light", black, 1vw, uppercase, center);

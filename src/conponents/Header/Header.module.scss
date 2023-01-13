@@ -9,6 +9,12 @@
     left: $left;
 }
 
+@mixin image($url, $position, $size) {
+  background: url($url) no-repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
   @mixin font($family, $color, $size, $transform, $align) {
     font-family: $family; 
     color: $color;
@@ -18,22 +24,24 @@
   }
   
 .header {
-    height: 90px;
+    height: 5vw;
     display: flex;
     background-color: white;
 }
 
 .logo {
-    background-image: url("../../assets/images/logo.png");
+    @include image("../../assets/images/logo.png", center, 100%);
 
-    @include possitionTopLeft(absolute, 27px, 15%);
+    @include possitionTopLeft(relative, 50%, 15vw);
+    transform: translate(0, -50%);
 
-    @include dimensions(131px, 35px);
+    @include dimensions(9vw, 3.5vw);
 }
 
 .navbar {
-    gap: 50px;
+    gap: 4vw;
 
-    @include possitionTopLeft(absolute, 37px, 50%);
-    @include dimensions(530px, 15px);
+    @include possitionTopLeft(relative, 50%, 50vw);
+    transform: translate(0, -50%);
+    @include dimensions(35vw, 1.2vw);
   }
